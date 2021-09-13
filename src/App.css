@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.header{
+  background-color: #9c2d49;
+}
+
+#loginFormBox{
+  position: fixed;
+  background: linear-gradient(180deg, #8f1a378e 0%, #8f1a37 60%, #8f1a37 100%);
+  width: 400px;
+  height: 100px;
+  left: 35%;
+  border-color: black;
+  border-radius: 10px;
+}
+
+#loginForm{
+  position: absolute;
+  width: 100%;
+  left: 40%;
+  top: 40%;
+}
+
+#loginBttn{
+  position: absolute;
+  width: 20%;
+  bottom: 6px;
+  right: 6px;
+}
+
+#loginPrompt{
+  text-align: center;
+}

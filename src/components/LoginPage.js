@@ -1,8 +1,25 @@
-import react from "react"
+import react, { useState } from "react"
 
-function LoginPage(){
+function LoginPage({ usernames, handleUser }){
+  const [ input, setInput ] = useState({})
+
+  function handleChange(e){
+    return(
+      setInput(e.target.value)
+    )  
+  }
+
   return(
-    <h1>LoginPage</h1>
+    
+    <div id="loginFormBox">
+      <h3 id="loginPrompt">WELCOME, PLEASE LOGIN...</h3>
+      <form id="loginForm">
+        <select onChange={handleChange}>
+          {usernames.map(name => <option >{name}</option>)}
+        </select>
+      </form>
+    <button id="loginBttn" onClick={()=> handleUser(input)} >Login</button>
+    </div>
   )
 }
 
