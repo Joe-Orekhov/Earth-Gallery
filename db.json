@@ -1,0 +1,56 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "itemName": "Moon Phases, Set of 3",
+            "itemImg": "https://i.etsystatic.com/7352268/r/il/5fe530/2012728993/il_794xN.2012728993_o519.jpg",
+            "itemCreator": "Aurora",
+            "itemDescription": "A set of watercolor paintings, based on the moon's phases. Each print is 11\"x14\". Frames not included.",
+            "itemPrice": 89
+        },
+        {
+            "id": 2,
+            "itemName": "Picture of Bodega Bay",
+            "itemImg": "https://i.etsystatic.com/25481369/r/il/8f1cd5/2579516584/il_794xN.2579516584_8ypa.jpg",
+            "itemCreator": "Sparrow",
+            "itemDescription": "Black and white photo taken of the California Coast near Bodega Bay. Photo is 12\"x18\". Frame included, 14\"x20\".",
+            "itemPrice": 120
+        },
+        {
+            "id": 3,
+            "itemName": "Macrame Headboard Wall Art",
+            "itemImg": "https://i.etsystatic.com/12236165/r/il/166c5b/1954094120/il_794xN.1954094120_lkrp.jpg",
+            "itemCreator": "Rose",
+            "itemDescription": "Handmade macrame wall art. Intended for use as a headboard piece for a full sized bed. Width is 74\".",
+            "itemPrice": 65
+        },
+        {
+            "id": 4,
+            "itemName": "Concrete Planters, Set of 2",
+            "itemImg": "https://i.etsystatic.com/24648433/r/il/fc82bf/2900695375/il_794xN.2900695375_i5fx.jpg",
+            "itemCreator": "Sparrow",
+            "itemDescription": "Medium sized pots. Diameter of 12\" and height of 10\".",
+            "itemPrice": 52
+        }
+    ],
+    "users" : [
+        {
+            "id": 1,
+            "username": "Aurora",
+            "userImg": "https://cdn.stocksnap.io/img-thumbs/960w/yellow-flower_GWT9JVALSV.jpg",
+            "cartItems": []
+        },
+        {
+            "id": 2,
+            "username": "Sparrow",
+            "userImg": "https://cdn.stocksnap.io/img-thumbs/960w/lion-animal_59MITCJOK0.jpg",
+            "cartItems": []
+        },
+        {
+            "id": 3,
+            "username": "Rose",
+            "userImg": "https://cdn.stocksnap.io/img-thumbs/960w/butterfly-close%20up_IKM10BMRII.jpg",
+            "cartItems": []
+        }
+    ]
+}
