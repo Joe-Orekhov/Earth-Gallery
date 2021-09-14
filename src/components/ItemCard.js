@@ -1,8 +1,19 @@
-import react from "react"
+import react from "react";
 
-function ItemCard(){
+function ItemCard({ item, buttonText }){
+
+  const { itemName, itemImg, itemCreator, itemDescription, itemPrice } = item;
+
   return(
-    <h3>- ItemCard</h3>
+    <div className="item-card">
+      <div className="image-box">
+        <img className="item-image" src={itemImg} alt={itemName}></img>
+      </div>
+      <span id="card-price">{itemPrice}</span>
+      <h3>{itemName}</h3>
+      <p>{itemDescription}</p>
+      <button>{buttonText}</button>
+    </div>
   )
 }
 

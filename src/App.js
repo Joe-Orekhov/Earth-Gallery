@@ -1,18 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from "./components/Header.js"
-import LoginPage from "./components/LoginPage.js"
-import ShopPage from "./components/ShopPage.js"
-import SellPage from "./components/SellPage.js"
-import Cart from "./components/Cart.js"
-
-import react, { useEffect, useState } from "react"
+import Header from "./components/Header"
+import LoginPage from "./components/LoginPage"
+import ShopPage from "./components/ShopPage"
+import SellPage from "./components/SellPage"
+import Cart from "./components/Cart"
+import React, { useEffect, useState } from 'react';
+import { getByDisplayValue } from '@testing-library/react';
 
 function App() {
 
-  const [ usernames, setUsernames ] = useState([])
+  const [ itemsArray, setItemsArray ] = useState([]);
+  const [ searchTerm, setSearchTerm ] = useState("");
+  const [ displayedItems, setDisplayedItems ] = useState([]);
 
-  const [ selectUser, setSelectUser ] = useState('')
+  useEffect(() => {
+    fetch("http://localhost:3000/items")
+    .then(resp => resp.json())
+    .then(itemsData => {
+      // console.log(itemsData);
+      setItemsArray(itemsData);
+      setDisplayedItems(itemsData);
+    })
+  }, [])
+
+  function handleSearchSubmit(term) {
+    let renderedItems = itemsArray.filter(item => item.itemName.toLowerCase().includes(term.toLowerCase()));
+    setDisplayedItems(renderedItems);
+  }
+
+  const [ usernames, setUsernames ] = useState([])
+  const [ selectUser, setSelectUser ] = useState({})
+
 
   useEffect(()=>{
     fetch("http://localhost:3000/users")
@@ -28,12 +47,13 @@ function App() {
   return (
     <div>
 
-      <Header selectUser={selectUser}/>
-      <LoginPage usernames={usernames} handleUser={handleUser}/>
-      <ShopPage />
-      <SellPage />
-      <Cart />
 
+      <Header selectUser={selectUser}/>
+
+      <LoginPage usernames={usernames} handleUser={handleUser}/>
+      <ShopPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit}/>
+      <SellPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit}/>
+      <Cart />
     </div>
   );
 }

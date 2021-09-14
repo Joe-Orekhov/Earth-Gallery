@@ -1,5 +1,5 @@
 {
-    "items": [
+    "items" : [
         {
             "id": 1,
             "itemName": "Moon Phases, Set of 3",
@@ -33,6 +33,7 @@
             "itemPrice": 52
         }
     ],
+
     "users" : [
         {
             "id": 1,

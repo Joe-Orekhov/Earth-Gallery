@@ -28,6 +28,43 @@
   color: #61dafb;
 }
 
+.cards-container {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  z-index: 1;
+}
+
+.item-card {
+  position: relative;
+  left: 25%;
+  border: 1px solid rgb(87, 116, 143);
+  background-color: white;
+  padding: 15px 15px 60px ;
+  box-shadow: 5px 10px 10px darkgrey;
+  height: 350px;
+  width: 250px;
+  text-align: center;
+}
+
+.item-card span{
+  position: relative;
+  right: 105px;
+  bottom: 25px;
+}
+
+.item-image{
+  width: 245px;
+  height: 150px;
+  object-fit: cover;
+  border: 1px solid darkgrey;
+}
+
+.item-card span {
+  background-color: transparent;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -42,7 +79,8 @@
   top:0;
   background-color: #9c2d49;
   text-align: center;
-  
+  z-index: 2;
+  box-shadow: 5px 5px 5px rgb(128, 128, 128);
 }
 
 #loginFormBox{
