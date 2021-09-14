@@ -1,4 +1,5 @@
 import react, { useState } from "react"
+import { Link } from "react-router-dom"
 
 function LoginPage({ usernames, handleUser }){
   const [ input, setInput ] = useState({})
@@ -18,7 +19,9 @@ function LoginPage({ usernames, handleUser }){
           {usernames.map(name => <option >{name}</option>)}
         </select>
       </form>
-    <button id="loginBttn" onClick={()=> handleUser(input)} >Login</button>
+      <Link to="/shop">
+        <button id="loginBttn" onClick={()=> handleUser(input)} >Login</button>
+      </Link>
     </div>
   )
 }
