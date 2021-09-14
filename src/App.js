@@ -5,10 +5,8 @@ import LoginPage from "./components/LoginPage"
 import ShopPage from "./components/ShopPage"
 import SellPage from "./components/SellPage"
 import Cart from "./components/Cart"
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getByDisplayValue } from '@testing-library/react';
-
-import react, { useEffect, useState } from "react"
 
 function App() {
 
@@ -29,6 +27,7 @@ function App() {
   function handleSearchSubmit(term) {
     let renderedItems = itemsArray.filter(item => item.itemName.toLowerCase().includes(term.toLowerCase()));
     setDisplayedItems(renderedItems);
+  }
 
   const [ usernames, setUsernames ] = useState([])
   const [ selectUser, setSelectUser ] = useState({})
