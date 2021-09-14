@@ -37,8 +37,12 @@
   }
 }
 
-.header{
+#header{
+  position: sticky;
+  top:0;
   background-color: #9c2d49;
+  text-align: center;
+  
 }
 
 #loginFormBox{

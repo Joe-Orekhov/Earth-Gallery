@@ -1,9 +1,10 @@
 import react from "react"
 
-function Header(){
+  function Header({ selectUser }){
+  console.log(selectUser.toString())
   return(
-    <div className="header">
-      <h1>HEADER</h1>
+    <div id="header">
+        <h1>{`Welcome to ${selectUser.toString()}'s Art Gallaery`}</h1>
     </div>
 
   )

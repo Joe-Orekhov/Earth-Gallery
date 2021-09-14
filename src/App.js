@@ -12,7 +12,7 @@ function App() {
 
   const [ usernames, setUsernames ] = useState([])
 
-  const [ selectUser, setSelectUser ] = useState({})
+  const [ selectUser, setSelectUser ] = useState('')
 
   useEffect(()=>{
     fetch("http://localhost:3000/users")
@@ -24,10 +24,11 @@ function App() {
     setSelectUser(user)
   }
 
+  
   return (
     <div>
 
-      <Header />
+      <Header selectUser={selectUser}/>
       <LoginPage usernames={usernames} handleUser={handleUser}/>
       <ShopPage />
       <SellPage />
