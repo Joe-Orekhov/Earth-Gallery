@@ -2,7 +2,7 @@ import react from "react"
 import ItemsContainer from "./ItemsContainer";
 
 
-function SellPage({ displayedItems, handleSearchSubmit, selectUser }){
+function SellPage({ displayedItems, handleSearchSubmit, selectUser, handleSubmitEdit }){
 
   const buttonText= "Edit";
 
@@ -13,7 +13,11 @@ function SellPage({ displayedItems, handleSearchSubmit, selectUser }){
   return(
     <div>
       <h1>SellPage</h1>
-      <ItemsContainer displayedItems={userSellItems} buttonText={buttonText}/>
+      <ItemsContainer 
+        displayedItems={userSellItems} 
+        buttonText={buttonText}
+        handleSubmitEdit={handleSubmitEdit}
+      />
     </div>
   )
 }

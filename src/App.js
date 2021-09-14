@@ -12,7 +12,7 @@ function App() {
   const [ itemsArray, setItemsArray ] = useState([]);
   const [ searchTerm, setSearchTerm ] = useState("");
   const [ displayedItems, setDisplayedItems ] = useState([]);
-  // const [ userSellItems, setUserSellItems ] = useState([]);
+  const [ patchedEdit, setPatchedEdit ] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/items")
@@ -21,16 +21,28 @@ function App() {
       setItemsArray(itemsData);
       setDisplayedItems(itemsData);
     })
-  }, [])
+  }, [patchedEdit])
 
   function handleSearchSubmit(term) {
     let renderedItems = itemsArray.filter(item => item.itemName.toLowerCase().includes(term.toLowerCase()));
     setDisplayedItems(renderedItems);
   }
 
+  function handleSubmitEdit(editedItem) {
+    fetch(`http://localhost:3000/items${editedItem.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(editedItem)
+    })
+    .then(resp => resp.json())
+    .then(data => setPatchedEdit(!patchedEdit))
+  }
+
   const [ usernames, setUsernames ] = useState([])
   const [ selectUser, setSelectUser ] = useState("")
-
 
   useEffect(()=>{
     fetch("http://localhost:3000/users")
@@ -42,9 +54,6 @@ function App() {
 
   function handleUser(user){
     setSelectUser(user);
-    // let sellItemsList = displayedItems.filter(item => item.itemCreator === user);
-    // setUserSellItems(sellItemsList);
-    // console.log(userSellItems);
   }
 
   
@@ -53,10 +62,18 @@ function App() {
       <Header selectUser={selectUser}/>
       <Switch>
         <Route path="/shop">
-          <ShopPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit}/>
+          <ShopPage 
+            displayedItems={displayedItems} 
+            handleSearchSubmit={handleSearchSubmit}
+          />
         </Route>
         <Route path="/sell">
-          <SellPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit} selectUser={selectUser}/>
+          <SellPage 
+            displayedItems={displayedItems} 
+            handleSearchSubmit={handleSearchSubmit} 
+            selectUser={selectUser} 
+            handleSubmitEdit={handleSubmitEdit}
+          />
         </Route>
         <Route path="/cart">
           <Cart />

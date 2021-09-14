@@ -1,8 +1,13 @@
-import react from "react";
+import react, { useState } from "react";
 
 function ItemCard({ item, buttonText }){
 
   const { itemName, itemImg, itemCreator, itemDescription, itemPrice } = item;
+  const [ showEditForm, setEditForm ] = useState(false);
+
+  function handleClick() {
+    setEditForm(!showEditForm);
+  }
 
   return(
     <div className="item-card">
@@ -12,7 +17,7 @@ function ItemCard({ item, buttonText }){
       <span id="card-price">{itemPrice}</span>
       <h3>{itemName}</h3>
       <p>{itemDescription}</p>
-      <button>{buttonText}</button>
+      <button onClick={handleClick}>{buttonText}</button>
     </div>
   )
 }
