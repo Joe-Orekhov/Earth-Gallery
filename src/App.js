@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from "./components/Header"
 import LoginPage from "./components/LoginPage"
@@ -6,7 +5,6 @@ import ShopPage from "./components/ShopPage"
 import SellPage from "./components/SellPage"
 import Cart from "./components/Cart"
 import React, { useEffect, useState } from 'react';
-import { getByDisplayValue } from '@testing-library/react';
 import { Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -14,12 +12,12 @@ function App() {
   const [ itemsArray, setItemsArray ] = useState([]);
   const [ searchTerm, setSearchTerm ] = useState("");
   const [ displayedItems, setDisplayedItems ] = useState([]);
+  // const [ userSellItems, setUserSellItems ] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/items")
     .then(resp => resp.json())
     .then(itemsData => {
-      // console.log(itemsData);
       setItemsArray(itemsData);
       setDisplayedItems(itemsData);
     })
@@ -31,17 +29,22 @@ function App() {
   }
 
   const [ usernames, setUsernames ] = useState([])
-  const [ selectUser, setSelectUser ] = useState({})
+  const [ selectUser, setSelectUser ] = useState("")
 
 
   useEffect(()=>{
     fetch("http://localhost:3000/users")
     .then(resp=> resp.json())
-    .then(data => setUsernames(data.map(x=> x.username)))
+    .then(data => {
+      setUsernames(data.map(x=> x.username))
+    })
   }, [])
 
   function handleUser(user){
-    setSelectUser(user)
+    setSelectUser(user);
+    // let sellItemsList = displayedItems.filter(item => item.itemCreator === user);
+    // setUserSellItems(sellItemsList);
+    // console.log(userSellItems);
   }
 
   
@@ -53,7 +56,7 @@ function App() {
           <ShopPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit}/>
         </Route>
         <Route path="/sell">
-          <SellPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit}/>
+          <SellPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit} selectUser={selectUser}/>
         </Route>
         <Route path="/cart">
           <Cart />

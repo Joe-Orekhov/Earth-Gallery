@@ -16,7 +16,7 @@ function LoginPage({ usernames, handleUser }){
       <h3 id="loginPrompt">WELCOME, PLEASE LOGIN...</h3>
       <form id="loginForm">
         <select onChange={handleChange}>
-          {usernames.map(name => <option >{name}</option>)}
+          {usernames.map(name => <option key={usernames.id}>{name}</option>)}
         </select>
       </form>
       <Link to="/shop">
