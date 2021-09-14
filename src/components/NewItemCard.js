@@ -1,6 +1,6 @@
-import react from "react"
+import react from "react";
 
-function NewItemForm({ buttonText }){
+function NewItemCard({ buttonText }){
   return(
     <div className="item-card">
       <img></img>
@@ -12,4 +12,4 @@ function NewItemForm({ buttonText }){
   )
 }
 
-export default NewItemForm;
+export default NewItemCard;
