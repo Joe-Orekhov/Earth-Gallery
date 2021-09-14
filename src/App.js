@@ -7,6 +7,7 @@ import SellPage from "./components/SellPage"
 import Cart from "./components/Cart"
 import React, { useEffect, useState } from 'react';
 import { getByDisplayValue } from '@testing-library/react';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
 
@@ -46,14 +47,21 @@ function App() {
   
   return (
     <div>
-
-
       <Header selectUser={selectUser}/>
-
-      <LoginPage usernames={usernames} handleUser={handleUser}/>
-      <ShopPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit}/>
-      <SellPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit}/>
-      <Cart />
+      <Switch>
+        <Route path="/shop">
+          <ShopPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit}/>
+        </Route>
+        <Route path="/sell">
+          <SellPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit}/>
+        </Route>
+        <Route path="/cart">
+          <Cart />
+        </Route>
+        <Route path="/">
+          <LoginPage usernames={usernames} handleUser={handleUser}/>
+        </Route>
+      </Switch>
     </div>
   );
 }
