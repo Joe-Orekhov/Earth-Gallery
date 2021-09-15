@@ -1,11 +1,10 @@
 import react from "react"
 import CartItem from "./CartItem";
 
-function CartItemList(){
+function CartItemList({ cartArr }){
   return(
     <div>
-      <h2>- CartItemsList</h2>
-      <CartItem />
+      {cartArr.map(cartItem => <CartItem cartItem={cartItem}/> )}
     </div>
   )
 }

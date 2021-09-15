@@ -1,6 +1,6 @@
 import react from "react";
 
-function ItemCard({ item, buttonText }){
+function ItemCard({ item, buttonText, handleClick }){
 
   const { itemName, itemImg, itemCreator, itemDescription, itemPrice } = item;
 
@@ -10,9 +10,9 @@ function ItemCard({ item, buttonText }){
         <img className="item-image" src={itemImg} alt={itemName}></img>
       </div>
       <span id="card-price">{itemPrice}</span>
-      <h3>{itemName}</h3>
+      <h3 name="name">{itemName}</h3>
       <p>{itemDescription}</p>
-      <button>{buttonText}</button>
+      <button onClick={() => handleClick(item)}> {buttonText}</button>
     </div>
   )
 }

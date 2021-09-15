@@ -3,7 +3,7 @@ import ItemCard from "./ItemCard"
 import NewItemCard from "./NewItemCard"
 
 // If I don't include a default prop here, my map doesn't work. Why do I have an undefined itemsArray if I set my default state to [] in App?
-function ItemsContainer({ displayedItems = [], buttonText } ){
+function ItemsContainer({ displayedItems = [], buttonText, handleClick } ){
 
   // const AddNewObj= {
   //   itemName: "Sell New Item",
@@ -20,7 +20,7 @@ function ItemsContainer({ displayedItems = [], buttonText } ){
     <div className="cards-container">
       {/* How can we make the below only render on the sell page? */}
       <NewItemCard buttonText={"Add New"}/>
-      {displayedItems.map(item => { return <ItemCard key={item.id} item={item} buttonText={buttonText}/>})}
+      {displayedItems.map(item => { return <ItemCard key={item.id} item={item} buttonText={buttonText} handleClick={ handleClick }/>})}
     </div>
   )
 }

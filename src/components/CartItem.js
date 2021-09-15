@@ -1,9 +1,18 @@
 import react from "react"
 
-function CartItem(){
+function CartItem({ cartItem }){
   return(
-    <h3>- CartItem</h3>
+    <div className="item-card">
+      <div className="image-box">
+        <img className="item-image" src={cartItem.itemImg} alt={cartItem.name}></img>
+      </div>
+      <span id="card-price">{cartItem.itemPrice}</span>
+      <h3 name="name">{cartItem.itemName}</h3>
+      <p>{cartItem.itemDescription}</p>
+    </div>
   )
 }
+
+
 
 export default CartItem;

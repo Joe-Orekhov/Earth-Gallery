@@ -44,19 +44,24 @@ function App() {
     setSelectUser(user)
   }
 
+  const [ cartArr, setCartArray ] = useState([])
+
+  function handleCartItems(items){
+    return setCartArray([...cartArr, items])
+  }
   
   return (
     <div>
       <Header selectUser={selectUser}/>
       <Switch>
         <Route path="/shop">
-          <ShopPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit}/>
+          <ShopPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit} handleCartItems={ handleCartItems }/>
         </Route>
         <Route path="/sell">
-          <SellPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit}/>
+          <SellPage displayedItems={displayedItems} handleSearchSubmit={handleSearchSubmit} />
         </Route>
         <Route path="/cart">
-          <Cart />
+          <Cart cartArr={cartArr} />
         </Route>
         <Route path="/">
           <LoginPage usernames={usernames} handleUser={handleUser}/>
