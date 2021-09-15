@@ -14,6 +14,7 @@ function ItemCard({ item, selectUser, buttonText, buttonValue, handleClick, perf
       console.log("This is an edit button")
       setEditForm(!showEditForm);
     } else if (location.pathname === "/shop") {
+      handleClick(item)
       console.log("This is added to cart!")
     }
   }

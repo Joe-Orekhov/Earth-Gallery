@@ -16,6 +16,14 @@ function App() {
   const [ deletedItem, setDeletedItem ] = useState(false);
   const [ createdItem, setCreatedItem ] = useState(false);
 
+  const [ userArr, setUserArr ] = useState([])
+  const [ selectUser, setSelectUser ] = useState({})
+
+  const [ cartArr, setCartArr ] = useState([])
+
+  
+  
+
   useEffect(() => {
     fetch("http://localhost:3000/items")
     .then(resp => resp.json())
@@ -76,13 +84,12 @@ function App() {
   useEffect(()=>{
     fetch("http://localhost:3000/users")
     .then(resp=> resp.json())
-    .then(data => {
-      setUsernames(data.map(x=> x.username))
-    })
+    .then(data => {setUserArr(data)})
   }, [])
+ 
 
   function handleUser(user){
-    setSelectUser(user);
+    setSelectUser(user[0])
   }
 
   const [ cartArr, setCartArray ] = useState([])
@@ -90,10 +97,31 @@ function App() {
   function handleCartItems(items){
     return setCartArray([...cartArr, items])
   }
+  // CART ITEMS LOGIC
+
+  function handleCartItems(item){
+    return(
+      fetch(`http://localhost:3000/users/${selectUser.id}`
+      ,{
+        method: "PATCH",
+        headers:{
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body : JSON.stringify({
+          ...selectUser, 
+          cartItems: [...selectUser.cartItems, item]
+        })
+      }
+      )
+      .then(resp => resp.json())
+      .then(newCartItem => setCartArr([...cartArr, newCartItem ]))
+    )
+  }
   
   return (
     <div>
-      <Header selectUser={selectUser}/>
+        <Header selectUser={selectUser} />
       <Switch>
         <Route path="/shop">
           <ShopPage 
@@ -113,10 +141,10 @@ function App() {
           />
         </Route>
         <Route path="/cart">
-          <Cart cartArr={cartArr} />
+          <Cart selectUser={selectUser} />
         </Route>
         <Route path="/">
-          <LoginPage usernames={usernames} handleUser={handleUser}/>
+          <LoginPage userArr={userArr} handleUser={handleUser}/>
         </Route>
       </Switch>
     </div>

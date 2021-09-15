@@ -1,10 +1,11 @@
 import react from "react"
 import CartItem from "./CartItem";
 
-function CartItemList({ cartArr }){
+function CartItemList({ selectUser }){
+  console.log(selectUser.cartItems)
   return(
     <div>
-      {cartArr.map(cartItem => <CartItem cartItem={cartItem}/> )}
+      {/* {cartArr.map(cartItem => <CartItem cartItem={cartItem}/> )} */}
     </div>
   )
 }
