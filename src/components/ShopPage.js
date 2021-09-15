@@ -11,6 +11,7 @@ function ShopPage({ displayedItems, handleSearchSubmit, handleCartItems }){
     <div className="shop-page">
       <h1>Shop
         <Link to="/sell"><button>Sell</button></Link>
+        <Link to="/cart"><button>Cart</button></Link>
       </h1>
       <Search handleSearchSubmit={handleSearchSubmit} />
       <ItemsContainer displayedItems={displayedItems} buttonText={buttonText} handleClick={handleCartItems}/>
