@@ -1,4 +1,5 @@
 import react from "react"
+import ItemCard from "./ItemCard";
 
 function CartItem({ cartItem }){
   return(
