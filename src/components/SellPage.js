@@ -1,5 +1,6 @@
 import react from "react"
 import ItemsContainer from "./ItemsContainer";
+import { Link } from "react-router-dom";
 
 
 function SellPage({ displayedItems, handleSearchSubmit, selectUser, handleSubmitEdit }){
@@ -12,7 +13,10 @@ function SellPage({ displayedItems, handleSearchSubmit, selectUser, handleSubmit
 
   return(
     <div>
-      <h1>SellPage</h1>
+      <h1>SellPage
+        <Link to="/cart"><button>Cart</button></Link>
+        <Link to="/shop"><button>Shop</button></Link>
+      </h1>
       <ItemsContainer 
         displayedItems={userSellItems} 
         buttonText={buttonText}
