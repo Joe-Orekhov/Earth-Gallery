@@ -13,6 +13,8 @@ function App() {
   // const [ searchTerm, setSearchTerm ] = useState("");
   const [ displayedItems, setDisplayedItems ] = useState([]);
   const [ patchedEdit, setPatchedEdit ] = useState(false);
+  const [ deletedItem, setDeletedItem ] = useState(false);
+  const [ createdItem, setCreatedItem ] = useState(false);
 
   const [ userArr, setUserArr ] = useState([])
   const [ selectUser, setSelectUser ] = useState({})
@@ -29,7 +31,7 @@ function App() {
       setItemsArray(itemsData);
       setDisplayedItems(itemsData);
     })
-  }, [patchedEdit, cartArr])
+  }, [patchedEdit, deletedItem, createdItem])
 
   function handleSearchSubmit(term) {
     let renderedItems = itemsArray.filter(item => item.itemName.toLowerCase().includes(term.toLowerCase()));
@@ -37,7 +39,8 @@ function App() {
   }
 
   function handleSubmitEdit(editedItem) {
-    fetch(`http://localhost:3000/items${editedItem.id}`, {
+    console.log(editedItem)
+    fetch(`http://localhost:3000/items/${editedItem.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -49,7 +52,34 @@ function App() {
     .then(data => setPatchedEdit(!patchedEdit))
   }
 
-  // USER NAME DATA
+  function performDelete(deleteItemId) {
+    // console.log(deleteItemId);
+    fetch(`http://localhost:3000/items/${deleteItemId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      }
+    })
+    .then(resp => resp.json())
+    .then(data => setDeletedItem(!deletedItem))
+  }
+
+  function performAdd(newItem) {
+    fetch("http://localhost:3000/items", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(newItem)
+    })
+    .then(resp => resp.json())
+    .then(data => setCreatedItem(!createdItem))
+  }
+
+  const [ usernames, setUsernames ] = useState([])
+  const [ selectUser, setSelectUser ] = useState("")
 
   useEffect(()=>{
     fetch("http://localhost:3000/users")
@@ -62,6 +92,11 @@ function App() {
     setSelectUser(user[0])
   }
 
+  const [ cartArr, setCartArray ] = useState([])
+  
+  function handleCartItems(items){
+    return setCartArray([...cartArr, items])
+  }
   // CART ITEMS LOGIC
 
   function handleCartItems(item){
@@ -101,6 +136,8 @@ function App() {
             handleSearchSubmit={handleSearchSubmit} 
             selectUser={selectUser} 
             handleSubmitEdit={handleSubmitEdit}
+            performDelete={performDelete}
+            performAdd={performAdd}
           />
         </Route>
         <Route path="/cart">
