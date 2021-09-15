@@ -1,18 +1,37 @@
-import react from "react"
+import react, { useState } from "react";
 
-function EditItemForm({ item }){
+function EditItemForm({ item, handleSubmitEdit, selectUser }){
 
   const { itemName, itemImg, itemCreator, itemDescription, itemPrice } = item;
+  const [ updatedInput, setUpdatedInput ] = useState({
+    itemName,
+    itemImg,
+    itemCreator: selectUser,
+    itemDescription,
+    itemPrice
+  })
+
+  function handleInput(event) {
+    setUpdatedInput({
+      ...updatedInput,
+      [event.target.name] : event.target.value
+    });
+    console.log(updatedInput);
+  }
+
+  function handleSubmit() {
+    handleSubmitEdit(updatedInput)
+  }
 
   return(
     <div className="edit-form">
       <h1>Edit</h1>
       <form>
-        <input type="text" name="name">Name: </input>
-        <input type="text" name="image">Image URL: </input>
-        <input type="text" name="description">Description: </input>
-        <input type="text" name="price">Price: </input>
-        <input type="submit">Submit</input>
+        <label>Name: <input type="text" name="name" value={itemName} onChange={handleInput}/></label>
+        <label>Image URL: <input type="text" name="image" value={itemImg}/></label>
+        <label>Description: <input type="text" name="description" value={itemDescription}/></label>
+        <label>Price: <input type="text" name="price" value={itemPrice}/></label>
+        <input type="submit" value="Submit" />
       </form>
     </div>
   )

@@ -17,6 +17,7 @@ function SellPage({ displayedItems, handleSearchSubmit, selectUser, handleSubmit
         displayedItems={userSellItems} 
         buttonText={buttonText}
         handleSubmitEdit={handleSubmitEdit}
+        selectUser={selectUser}
       />
     </div>
   )

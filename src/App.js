@@ -10,7 +10,7 @@ import { Route, Switch } from 'react-router-dom';
 function App() {
 
   const [ itemsArray, setItemsArray ] = useState([]);
-  const [ searchTerm, setSearchTerm ] = useState("");
+  // const [ searchTerm, setSearchTerm ] = useState("");
   const [ displayedItems, setDisplayedItems ] = useState([]);
   const [ patchedEdit, setPatchedEdit ] = useState(false);
 
