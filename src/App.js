@@ -10,20 +10,15 @@ import { Route, Switch } from 'react-router-dom';
 function App() {
 
   const [ itemsArray, setItemsArray ] = useState([]);
-  // const [ searchTerm, setSearchTerm ] = useState("");
   const [ displayedItems, setDisplayedItems ] = useState([]);
   const [ patchedEdit, setPatchedEdit ] = useState(false);
   const [ deletedItem, setDeletedItem ] = useState(false);
   const [ createdItem, setCreatedItem ] = useState(false);
-
   const [ userArr, setUserArr ] = useState([])
   const [ selectUser, setSelectUser ] = useState({})
-
   const [ cartArr, setCartArr ] = useState([])
 
   
-  
-
   useEffect(() => {
     fetch("http://localhost:3000/items")
     .then(resp => resp.json())
@@ -53,7 +48,6 @@ function App() {
   }
 
   function performDelete(deleteItemId) {
-    // console.log(deleteItemId);
     fetch(`http://localhost:3000/items/${deleteItemId}`, {
       method: "DELETE",
       headers: {
@@ -78,9 +72,6 @@ function App() {
     .then(data => setCreatedItem(!createdItem))
   }
 
-  const [ usernames, setUsernames ] = useState([])
-  const [ selectUser, setSelectUser ] = useState("")
-
   useEffect(()=>{
     fetch("http://localhost:3000/users")
     .then(resp=> resp.json())
@@ -91,11 +82,9 @@ function App() {
   function handleUser(user){
     setSelectUser(user[0])
   }
-
-  const [ cartArr, setCartArray ] = useState([])
   
   function handleCartItems(items){
-    return setCartArray([...cartArr, items])
+    setCartArr([...cartArr, items])
   }
   // CART ITEMS LOGIC
 

@@ -5,7 +5,7 @@ function NewItemForm({ selectUser, performAdd }){
   const [ newInput, setNewInput ] = useState({
     itemName: "",
     itemImg: "",
-    itemCreator: selectUser,
+    itemCreator: selectUser.username,
     itemDescription: "",
     itemPrice: 0
   })

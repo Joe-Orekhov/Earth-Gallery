@@ -7,7 +7,7 @@ function SellPage({ displayedItems, handleSearchSubmit, selectUser, handleSubmit
 
   const buttonText= "Edit";
 
-  const userSellItems = displayedItems.filter(item => item.itemCreator === selectUser)
+  const userSellItems = displayedItems.filter(item => item.itemCreator === selectUser.username)
 
   console.log(userSellItems);
 

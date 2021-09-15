@@ -6,7 +6,7 @@ function EditItemForm({ item, handleSubmitEdit, selectUser, performDelete }){
   const [ updatedInput, setUpdatedInput ] = useState({
     name: itemName,
     image: itemImg,
-    itemCreator: selectUser,
+    itemCreator: selectUser.username,
     description: itemDescription,
     price: itemPrice
   })
@@ -25,7 +25,7 @@ function EditItemForm({ item, handleSubmitEdit, selectUser, performDelete }){
     const updatedObj = {
       itemName: updatedInput.name,
       itemImg: updatedInput.image,
-      itemCreator: selectUser,
+      itemCreator: selectUser.username,
       itemDescription: updatedInput.description,
       itemPrice: updatedInput.price,
       id: item.id

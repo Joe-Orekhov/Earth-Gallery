@@ -14,7 +14,7 @@
       "itemImg": "https://i.etsystatic.com/25481369/r/il/8f1cd5/2579516584/il_794xN.2579516584_8ypa.jpg",
       "itemCreator": "Sparrow",
       "itemDescription": "Black and white photo taken of the California Coast near Bodega Bay. Photo is 12\"x18\". Frame included, 14\"x20\".",
-      "itemPrice": 120
+      "itemPrice": "135"
     },
     {
       "id": 3,
@@ -39,6 +39,14 @@
       "itemDescription": "Love the smell of coffee in the morning? Want it without the afternoon jitters? Replace your cup of joe with this scent! ",
       "itemPrice": "20",
       "id": 5
+    },
+    {
+      "itemName": "Leather Dog Leash",
+      "itemImg": "https://i.etsystatic.com/12670967/r/il/1ec7f1/1281304531/il_794xN.1281304531_qjgq.jpg",
+      "itemCreator": "Sparrow",
+      "itemDescription": "A brown leash, 38\" long. Gold hardware included. I'll send you an email to collect engraving info.",
+      "itemPrice": "35",
+      "id": 6
     }
   ],
   "users": [
