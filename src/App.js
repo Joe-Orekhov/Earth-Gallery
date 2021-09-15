@@ -14,6 +14,14 @@ function App() {
   const [ displayedItems, setDisplayedItems ] = useState([]);
   const [ patchedEdit, setPatchedEdit ] = useState(false);
 
+  const [ userArr, setUserArr ] = useState([])
+  const [ selectUser, setSelectUser ] = useState({})
+
+  const [ cartArr, setCartArr ] = useState([])
+
+  
+  
+
   useEffect(() => {
     fetch("http://localhost:3000/items")
     .then(resp => resp.json())
@@ -21,7 +29,7 @@ function App() {
       setItemsArray(itemsData);
       setDisplayedItems(itemsData);
     })
-  }, [patchedEdit])
+  }, [patchedEdit, cartArr])
 
   function handleSearchSubmit(term) {
     let renderedItems = itemsArray.filter(item => item.itemName.toLowerCase().includes(term.toLowerCase()));
@@ -43,39 +51,34 @@ function App() {
 
   // USER NAME DATA
 
-  const [ userArr, setUserArr ] = useState([])
-  const [ selectUser, setSelectUser ] = useState({})
-
   useEffect(()=>{
     fetch("http://localhost:3000/users")
     .then(resp=> resp.json())
     .then(data => {setUserArr(data)})
   }, [])
+ 
 
   function handleUser(user){
     setSelectUser(user[0])
   }
 
   // CART ITEMS LOGIC
-  const [ cartArr, setCartArr ] = useState([])
-
-  // function handleCartItems(item){
-  //   return (
-  //     setCartArr([...cartArr, item])
-  //   )
-  // }
 
   function handleCartItems(item){
-    console.log(selectUser.id)
     return(
-      fetch(`http://localhost:3000/users/${selectUser.id}`,{
-        method: "POST",
+      fetch(`http://localhost:3000/users/${selectUser.id}`
+      ,{
+        method: "PATCH",
         headers:{
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
-        body : JSON.stringify(item)
-      })
+        body : JSON.stringify({
+          ...selectUser, 
+          cartItems: [...selectUser.cartItems, item]
+        })
+      }
+      )
       .then(resp => resp.json())
       .then(newCartItem => setCartArr([...cartArr, newCartItem ]))
     )
@@ -101,7 +104,7 @@ function App() {
           />
         </Route>
         <Route path="/cart">
-          <Cart cartArr={cartArr} />
+          <Cart selectUser={selectUser} />
         </Route>
         <Route path="/">
           <LoginPage userArr={userArr} handleUser={handleUser}/>

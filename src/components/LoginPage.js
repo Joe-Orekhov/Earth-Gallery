@@ -22,6 +22,7 @@ function LoginPage({ userArr, handleUser }){
       <h3 id="loginPrompt">WELCOME, PLEASE LOGIN...</h3>
       <form id="loginForm" onChange={handleChange}>
         <select >
+          <option>Select User</option>
           {userArr.map(user => {
             return(
             <option value={user.id} key={user.id} >{user.username}</option>

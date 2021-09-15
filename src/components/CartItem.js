@@ -2,7 +2,6 @@ import react from "react"
 import ItemCard from "./ItemCard";
 
 function CartItem({ cartItem }){
-  console.log(cartItem)
   return(
     <div className="item-card">
       <div className="image-box">

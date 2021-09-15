@@ -18,7 +18,7 @@ import react from "react"
       }else{
         return(
           <div id="header">
-            <h1>{`Earths gallery is expericinf some dificulties`}</h1>
+            <h1>{`Earths gallery is experiencing some dificulties`}</h1>
           </div>
         )
       }
