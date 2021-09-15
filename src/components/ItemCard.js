@@ -3,7 +3,7 @@ import EditItemForm from "./EditItemForm";
 import { useLocation } from "react-router-dom";
 
 
-function ItemCard({ item, selectUser, buttonText, buttonValue, handleClick }){
+function ItemCard({ item, selectUser, buttonText, buttonValue, handleClick, performDelete }){
 
   const location = useLocation();
   const { itemName, itemImg, itemCreator, itemDescription, itemPrice } = item;
@@ -27,7 +27,7 @@ function ItemCard({ item, selectUser, buttonText, buttonValue, handleClick }){
       <h3 name="name">{itemName}</h3>
       <p>{itemDescription}</p>
       <button onClick={handleEditClick} value={buttonValue}>{buttonText}</button>
-      {showEditForm ? <EditItemForm item={item} handleSubmitEdit={handleClick} selectUser={selectUser}/> : null}
+      {showEditForm ? <EditItemForm item={item} handleSubmitEdit={handleClick} selectUser={selectUser} performDelete={performDelete}/> : null}
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import react, { useState } from "react";
 
-function EditItemForm({ item, handleSubmitEdit, selectUser }){
+function EditItemForm({ item, handleSubmitEdit, selectUser, performDelete }){
 
   const { itemName, itemImg, itemCreator, itemDescription, itemPrice } = item;
   const [ updatedInput, setUpdatedInput ] = useState({
@@ -34,6 +34,10 @@ function EditItemForm({ item, handleSubmitEdit, selectUser }){
     handleSubmitEdit(updatedObj);
   }
 
+  function handleDeleteClick() {
+    performDelete(item.id);
+  }
+
   return(
     <div className="edit-form">
       <h1>Edit</h1>
@@ -44,6 +48,7 @@ function EditItemForm({ item, handleSubmitEdit, selectUser }){
         <label>Price: <input type="text" name="price" value={updatedInput.price} onChange={handleInput}/></label>
         <input type="submit" value="Submit" />
       </form>
+      <button onClick={handleDeleteClick}>Delete</button>
     </div>
   )
 }

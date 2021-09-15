@@ -13,6 +13,7 @@ function App() {
   // const [ searchTerm, setSearchTerm ] = useState("");
   const [ displayedItems, setDisplayedItems ] = useState([]);
   const [ patchedEdit, setPatchedEdit ] = useState(false);
+  const [ deletedItem, setDeletedItem ] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/items")
@@ -21,7 +22,7 @@ function App() {
       setItemsArray(itemsData);
       setDisplayedItems(itemsData);
     })
-  }, [patchedEdit])
+  }, [patchedEdit, deletedItem])
 
   function handleSearchSubmit(term) {
     let renderedItems = itemsArray.filter(item => item.itemName.toLowerCase().includes(term.toLowerCase()));
@@ -40,6 +41,20 @@ function App() {
     })
     .then(resp => resp.json())
     .then(data => setPatchedEdit(!patchedEdit))
+  }
+
+  function performDelete(deleteItemId) {
+    // console.log(deleteItemId);
+    fetch(`http://localhost:3000/items/${deleteItemId}`, {
+      method: "DELETE",
+      // headers: {
+      //   "Content-Type": "application/json",
+      //   "Accept": "application/json"
+      // },
+      // body: JSON.stringify(deleteItemId)
+    })
+    .then(resp => resp.json())
+    .then(data => setDeletedItem(!deletedItem))
   }
 
   const [ usernames, setUsernames ] = useState([])
@@ -80,6 +95,7 @@ function App() {
             handleSearchSubmit={handleSearchSubmit} 
             selectUser={selectUser} 
             handleSubmitEdit={handleSubmitEdit}
+            performDelete={performDelete}
           />
         </Route>
         <Route path="/cart">
