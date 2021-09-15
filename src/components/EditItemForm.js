@@ -4,11 +4,11 @@ function EditItemForm({ item, handleSubmitEdit, selectUser }){
 
   const { itemName, itemImg, itemCreator, itemDescription, itemPrice } = item;
   const [ updatedInput, setUpdatedInput ] = useState({
-    itemName,
-    itemImg,
+    name: itemName,
+    image: itemImg,
     itemCreator: selectUser,
-    itemDescription,
-    itemPrice
+    description: itemDescription,
+    price: itemPrice
   })
 
   function handleInput(event) {
@@ -18,18 +18,30 @@ function EditItemForm({ item, handleSubmitEdit, selectUser }){
     });
   }
 
-  function handleSubmit() {
-    handleSubmitEdit(updatedInput)
+  function handleSubmit(event) {
+
+    event.preventDefault();
+
+    const updatedObj = {
+      itemName: updatedInput.name,
+      itemImg: updatedInput.image,
+      itemCreator: selectUser,
+      itemDescription: updatedInput.description,
+      itemPrice: updatedInput.price,
+      id: item.id
+    };
+
+    handleSubmitEdit(updatedObj);
   }
 
   return(
     <div className="edit-form">
       <h1>Edit</h1>
-      <form>
-        <label>Name: <input type="text" name="name" value={updatedInput.itemName} onChange={handleInput}/></label>
-        <label>Image URL: <input type="text" name="image" value={updatedInput.itemImg}/></label>
-        <label>Description: <input type="text" name="description" value={updatedInput.itemDescription}/></label>
-        <label>Price: <input type="text" name="price" value={updatedInput.itemPrice}/></label>
+      <form onSubmit= {handleSubmit}>
+        <label>Name: <input type="text" name="name" value={updatedInput.name} onChange={handleInput}/></label>
+        <label>Image URL: <input type="text" name="image" value={updatedInput.image} onChange={handleInput}/></label>
+        <label>Description: <input type="text" name="description" value={updatedInput.description} onChange={handleInput}/></label>
+        <label>Price: <input type="text" name="price" value={updatedInput.price} onChange={handleInput}/></label>
         <input type="submit" value="Submit" />
       </form>
     </div>

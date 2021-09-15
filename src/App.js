@@ -29,7 +29,8 @@ function App() {
   }
 
   function handleSubmitEdit(editedItem) {
-    fetch(`http://localhost:3000/items${editedItem.id}`, {
+    console.log(editedItem)
+    fetch(`http://localhost:3000/items/${editedItem.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
