@@ -3,7 +3,7 @@ import ItemsContainer from "./ItemsContainer";
 import { Link } from "react-router-dom";
 
 
-function SellPage({ displayedItems, handleSearchSubmit, selectUser, handleSubmitEdit, performDelete }){
+function SellPage({ displayedItems, handleSearchSubmit, selectUser, handleSubmitEdit, performDelete, performAdd }){
 
   const buttonText= "Edit";
 
@@ -23,6 +23,7 @@ function SellPage({ displayedItems, handleSearchSubmit, selectUser, handleSubmit
         handleClick={handleSubmitEdit}
         selectUser={selectUser}
         performDelete={performDelete}
+        performAdd={performAdd}
       />
     </div>
   )

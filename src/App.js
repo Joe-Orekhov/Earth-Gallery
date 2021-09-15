@@ -14,6 +14,7 @@ function App() {
   const [ displayedItems, setDisplayedItems ] = useState([]);
   const [ patchedEdit, setPatchedEdit ] = useState(false);
   const [ deletedItem, setDeletedItem ] = useState(false);
+  const [ createdItem, setCreatedItem ] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/items")
@@ -22,7 +23,7 @@ function App() {
       setItemsArray(itemsData);
       setDisplayedItems(itemsData);
     })
-  }, [patchedEdit, deletedItem])
+  }, [patchedEdit, deletedItem, createdItem])
 
   function handleSearchSubmit(term) {
     let renderedItems = itemsArray.filter(item => item.itemName.toLowerCase().includes(term.toLowerCase()));
@@ -47,14 +48,26 @@ function App() {
     // console.log(deleteItemId);
     fetch(`http://localhost:3000/items/${deleteItemId}`, {
       method: "DELETE",
-      // headers: {
-      //   "Content-Type": "application/json",
-      //   "Accept": "application/json"
-      // },
-      // body: JSON.stringify(deleteItemId)
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      }
     })
     .then(resp => resp.json())
     .then(data => setDeletedItem(!deletedItem))
+  }
+
+  function performAdd(newItem) {
+    fetch("http://localhost:3000/items", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(newItem)
+    })
+    .then(resp => resp.json())
+    .then(data => setCreatedItem(!createdItem))
   }
 
   const [ usernames, setUsernames ] = useState([])
@@ -73,7 +86,7 @@ function App() {
   }
 
   const [ cartArr, setCartArray ] = useState([])
-
+  
   function handleCartItems(items){
     return setCartArray([...cartArr, items])
   }
@@ -96,6 +109,7 @@ function App() {
             selectUser={selectUser} 
             handleSubmitEdit={handleSubmitEdit}
             performDelete={performDelete}
+            performAdd={performAdd}
           />
         </Route>
         <Route path="/cart">
