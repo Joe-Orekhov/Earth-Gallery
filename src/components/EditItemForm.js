@@ -16,7 +16,6 @@ function EditItemForm({ item, handleSubmitEdit, selectUser }){
       ...updatedInput,
       [event.target.name] : event.target.value
     });
-    console.log(updatedInput);
   }
 
   function handleSubmit() {
@@ -27,10 +26,10 @@ function EditItemForm({ item, handleSubmitEdit, selectUser }){
     <div className="edit-form">
       <h1>Edit</h1>
       <form>
-        <label>Name: <input type="text" name="name" value={itemName} onChange={handleInput}/></label>
-        <label>Image URL: <input type="text" name="image" value={itemImg}/></label>
-        <label>Description: <input type="text" name="description" value={itemDescription}/></label>
-        <label>Price: <input type="text" name="price" value={itemPrice}/></label>
+        <label>Name: <input type="text" name="name" value={updatedInput.itemName} onChange={handleInput}/></label>
+        <label>Image URL: <input type="text" name="image" value={updatedInput.itemImg}/></label>
+        <label>Description: <input type="text" name="description" value={updatedInput.itemDescription}/></label>
+        <label>Price: <input type="text" name="price" value={updatedInput.itemPrice}/></label>
         <input type="submit" value="Submit" />
       </form>
     </div>
