@@ -8,11 +8,12 @@ function ItemCard({ item, selectUser, buttonText, buttonValue, handleClick }){
   const { itemName, itemImg, itemCreator, itemDescription, itemPrice } = item;
   const [ showEditForm, setEditForm ] = useState(false);
 
-  function handleClick(event) {
+  function handleEditClick(event) {
     if (event.target.value === "edit") {
       console.log("This is an edit button")
       setEditForm(!showEditForm);
     } else if (event.target.value === "addToCart") {
+      handleClick(item)
       console.log("This is added to cart!")
     }
   }
@@ -25,8 +26,8 @@ function ItemCard({ item, selectUser, buttonText, buttonValue, handleClick }){
       <span id="card-price">{itemPrice}</span>
       <h3 name="name">{itemName}</h3>
       <p>{itemDescription}</p>
-      <button onClick={handleClick} value={buttonValue}>{buttonText}</button>
-      {showEditForm ? <EditItemForm item={item} handleSubmitEdit={handleClick} selectUser={selectUser}/> : null}
+      <button onClick={handleEditClick} value={buttonValue}>{buttonText}</button>
+      {showEditForm ? <EditItemForm item={item} handleSubmitEdit={handleEditClick} selectUser={selectUser}/> : null}
     </div>
   )
 }

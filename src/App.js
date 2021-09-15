@@ -41,30 +41,49 @@ function App() {
     .then(data => setPatchedEdit(!patchedEdit))
   }
 
-  const [ usernames, setUsernames ] = useState([])
-  const [ selectUser, setSelectUser ] = useState("")
+  // USER NAME DATA
+
+  const [ userArr, setUserArr ] = useState([])
+  const [ selectUser, setSelectUser ] = useState({})
 
   useEffect(()=>{
     fetch("http://localhost:3000/users")
     .then(resp=> resp.json())
-    .then(data => {
-      setUsernames(data.map(x=> x.username))
-    })
+    .then(data => {setUserArr(data)})
   }, [])
 
   function handleUser(user){
-    setSelectUser(user);
+    setSelectUser(user[0])
   }
 
-  const [ cartArr, setCartArray ] = useState([])
+  // CART ITEMS LOGIC
+  const [ cartArr, setCartArr ] = useState([])
 
-  function handleCartItems(items){
-    return setCartArray([...cartArr, items])
+  // function handleCartItems(item){
+  //   return (
+  //     setCartArr([...cartArr, item])
+  //   )
+  // }
+
+  function handleCartItems(item){
+    console.log(selectUser.id)
+    return(
+      fetch(`http://localhost:3000/users/${selectUser.id}`,{
+        method: "POST",
+        headers:{
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body : JSON.stringify(item)
+      })
+      .then(resp => resp.json())
+      .then(newCartItem => setCartArr([...cartArr, newCartItem ]))
+    )
   }
   
   return (
     <div>
-      <Header selectUser={selectUser}/>
+        <Header selectUser={selectUser} />
       <Switch>
         <Route path="/shop">
           <ShopPage 
@@ -85,7 +104,7 @@ function App() {
           <Cart cartArr={cartArr} />
         </Route>
         <Route path="/">
-          <LoginPage usernames={usernames} handleUser={handleUser}/>
+          <LoginPage userArr={userArr} handleUser={handleUser}/>
         </Route>
       </Switch>
     </div>
