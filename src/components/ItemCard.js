@@ -1,7 +1,9 @@
 import react, { useState } from "react";
 import EditItemForm from "./EditItemForm";
 
+
 function ItemCard({ item, selectUser, buttonText, buttonValue, handleClick }){
+
 
   const { itemName, itemImg, itemCreator, itemDescription, itemPrice } = item;
   const [ showEditForm, setEditForm ] = useState(false);
@@ -21,7 +23,7 @@ function ItemCard({ item, selectUser, buttonText, buttonValue, handleClick }){
         <img className="item-image" src={itemImg} alt={itemName}></img>
       </div>
       <span id="card-price">{itemPrice}</span>
-      <h3>{itemName}</h3>
+      <h3 name="name">{itemName}</h3>
       <p>{itemDescription}</p>
       <button onClick={handleClick} value={buttonValue}>{buttonText}</button>
       {showEditForm ? <EditItemForm item={item} handleSubmitEdit={handleClick} selectUser={selectUser}/> : null}

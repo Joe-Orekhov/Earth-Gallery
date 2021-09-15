@@ -1,11 +1,12 @@
 import react from "react"
 import CartItemList from "./CartItemsList";
 
-function Cart(){
+function Cart({ cartArr }){
+  console.log(cartArr)
   return(
     <div>
       <h1>Cart</h1>
-      <CartItemList /> 
+       <CartItemList cartArr={cartArr} />
     </div>
 
   )

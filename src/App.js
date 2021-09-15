@@ -56,6 +56,11 @@ function App() {
     setSelectUser(user);
   }
 
+  const [ cartArr, setCartArray ] = useState([])
+
+  function handleCartItems(items){
+    return setCartArray([...cartArr, items])
+  }
   
   return (
     <div>
@@ -65,6 +70,7 @@ function App() {
           <ShopPage 
             displayedItems={displayedItems} 
             handleSearchSubmit={handleSearchSubmit}
+            handleCartItems={ handleCartItems }
           />
         </Route>
         <Route path="/sell">
@@ -76,7 +82,7 @@ function App() {
           />
         </Route>
         <Route path="/cart">
-          <Cart />
+          <Cart cartArr={cartArr} />
         </Route>
         <Route path="/">
           <LoginPage usernames={usernames} handleUser={handleUser}/>
