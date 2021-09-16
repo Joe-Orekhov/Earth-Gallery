@@ -94,20 +94,12 @@
       "userImg": "https://cdn.stocksnap.io/img-thumbs/960w/butterfly-close%20up_IKM10BMRII.jpg",
       "cartItems": [
         {
-          "id": 1,
-          "itemName": "Moon Phases, Set of 3",
-          "itemImg": "https://i.etsystatic.com/7352268/r/il/5fe530/2012728993/il_794xN.2012728993_o519.jpg",
-          "itemCreator": "Aurora",
-          "itemDescription": "A set of watercolor paintings, based on the moon's phases. Each print is 11\"x14\". Frames not included.",
-          "itemPrice": 89
-        },
-        {
-          "itemName": "Coffee Candle",
-          "itemImg": "https://i.etsystatic.com/10385964/r/il/e0b9fe/2992396185/il_794xN.2992396185_82qj.jpg",
-          "itemCreator": "Rose",
-          "itemDescription": "Love the smell of coffee in the morning? Want it without the afternoon jitters? Replace your cup of joe with this scent! ",
-          "itemPrice": "20",
-          "id": 5
+          "id": 2,
+          "itemName": "Picture of Bodega Bay",
+          "itemImg": "https://i.etsystatic.com/25481369/r/il/8f1cd5/2579516584/il_794xN.2579516584_8ypa.jpg",
+          "itemCreator": "Sparrow",
+          "itemDescription": "Black and white photo taken of the California Coast near Bodega Bay. Photo is 12\"x18\". Frame is included, 14\"x20\".",
+          "itemPrice": "135"
         }
       ]
     }

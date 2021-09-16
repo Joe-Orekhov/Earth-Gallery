@@ -19,6 +19,7 @@ function App() {
   const [ isAddedCart, setIsAddedCart ] = useState(false);
   const [ userCartItems, setUserCartItems ] = useState([]);
   const [ isCheckedOut, setIsCheckedOut ] = useState(false);
+  const [ isDeletedCart, setIsDeletedCart ] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/items")
@@ -77,7 +78,7 @@ function App() {
     fetch("http://localhost:3000/users")
     .then(resp=> resp.json())
     .then(data => setUserArr(data))
-  }, [isAddedCart, isCheckedOut])
+  }, [isAddedCart, isCheckedOut, isDeletedCart])
  
 
   function handleUser(user){
@@ -122,6 +123,25 @@ function App() {
       setIsCheckedOut(!isCheckedOut)
     })
   }
+
+  function performCartDelete(index) {
+    fetch(`http://localhost:3000/users/${selectUser.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        ...selectUser,
+        cartItems: userCartItems.slice(0, index).concat(userCartItems.slice(index + 1))
+      })
+    })
+    .then(resp => resp.json())
+    .then(data => {
+      setUserCartItems(userCartItems.slice(0, index).concat(userCartItems.slice(index + 1)));
+      setIsCheckedOut(!isDeletedCart);
+    })
+  }
   
   return (
     <div>
@@ -145,7 +165,7 @@ function App() {
           />
         </Route>
         <Route path="/cart">
-          <Cart selectUser={selectUser} userCartItems={userCartItems} performCheckout={performCheckout}/>
+          <Cart selectUser={selectUser} userCartItems={userCartItems} performCheckout={performCheckout} performCartDelete={performCartDelete}/>
         </Route>
         <Route path="/">
           <LoginPage userArr={userArr} handleUser={handleUser}/>
