@@ -86,12 +86,20 @@
       "userImg": "https://cdn.stocksnap.io/img-thumbs/960w/butterfly-close%20up_IKM10BMRII.jpg",
       "cartItems": [
         {
-          "id": 1,
-          "itemName": "Moon Phases, Set of 3",
-          "itemImg": "https://i.etsystatic.com/7352268/r/il/5fe530/2012728993/il_794xN.2012728993_o519.jpg",
-          "itemCreator": "Aurora",
-          "itemDescription": "A set of watercolor paintings, based on the moon's phases. Each print is 11\"x14\". Frames not included.",
-          "itemPrice": 89
+          "itemName": "Leather Dog Leash",
+          "itemImg": "https://i.etsystatic.com/12670967/r/il/1ec7f1/1281304531/il_794xN.1281304531_qjgq.jpg",
+          "itemCreator": "Sparrow",
+          "itemDescription": "A brown leash, 38\" long. Gold hardware included. I'll send you an email to collect engraving info.",
+          "itemPrice": "35",
+          "id": 6
+        },
+        {
+          "itemName": "Coffee Candle",
+          "itemImg": "https://i.etsystatic.com/10385964/r/il/e0b9fe/2992396185/il_794xN.2992396185_82qj.jpg",
+          "itemCreator": "Rose",
+          "itemDescription": "Love the smell of coffee in the morning? Want it without the afternoon jitters? Replace your cup of joe with this scent! ",
+          "itemPrice": "20",
+          "id": 5
         }
       ]
     }
