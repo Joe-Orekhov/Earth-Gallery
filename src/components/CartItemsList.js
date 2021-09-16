@@ -3,7 +3,7 @@ import CartItem from "./CartItem";
 
 function CartItemsList({ selectUser, userCartItems }){
   return(
-    <div>
+    <div className="cart-list">
       {userCartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem} />)}
     </div>
   )

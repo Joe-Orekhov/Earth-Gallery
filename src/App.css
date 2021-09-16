@@ -56,6 +56,27 @@ body {
   border: 1px solid darkgrey;
 }
 
+.cart-container {
+  padding: 15px;
+}
+
+.cart-list {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cart-item-card {
+  width: auto;
+  height: 150px;
+}
+
+.cart-image {
+  height: 100px;
+  float: right;
+  border-radius: 5px;
+}
+
 #loginFormBox{
   position: fixed;
   background: linear-gradient(180deg, #8f1a378e 0%, #8f1a37 60%, #8f1a37 100%);
