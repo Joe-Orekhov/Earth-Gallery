@@ -3,11 +3,11 @@ import ItemsContainer from "./ItemsContainer";
 import { Link } from "react-router-dom";
 
 
-function SellPage({ displayedItems, handleSearchSubmit, selectUser, handleSubmitEdit }){
+function SellPage({ displayedItems, handleSearchSubmit, selectUser, handleSubmitEdit, performDelete, performAdd }){
 
   const buttonText= "Edit";
 
-  const userSellItems = displayedItems.filter(item => item.itemCreator === selectUser)
+  const userSellItems = displayedItems.filter(item => item.itemCreator === selectUser.username)
 
   console.log(userSellItems);
 
@@ -20,6 +20,8 @@ function SellPage({ displayedItems, handleSearchSubmit, selectUser, handleSubmit
         buttonText={buttonText}
         handleClick={handleSubmitEdit}
         selectUser={selectUser}
+        performDelete={performDelete}
+        performAdd={performAdd}
       />
     </div>
   )
