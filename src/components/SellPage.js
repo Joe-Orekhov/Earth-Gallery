@@ -14,8 +14,6 @@ function SellPage({ displayedItems, handleSearchSubmit, selectUser, handleSubmit
   return(
     <div>
       <h1>SellPage
-        <Link to="/cart"><button>Cart</button></Link>
-        <Link to="/shop"><button>Shop</button></Link>
       </h1>
       <ItemsContainer 
         displayedItems={userSellItems} 
