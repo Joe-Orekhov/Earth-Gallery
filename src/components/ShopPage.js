@@ -8,10 +8,8 @@ function ShopPage({ displayedItems, handleSearchSubmit, performCartAdd }){
   const buttonText = "Add To Cart"
 
   return(
-    <div className="shop-page">
+    <div>
       <h1>Shop
-        <Link to="/sell"><button>Sell</button></Link>
-        <Link to="/cart"><button>Cart</button></Link>
       </h1>
       <Search handleSearchSubmit={handleSearchSubmit} />
       <ItemsContainer 

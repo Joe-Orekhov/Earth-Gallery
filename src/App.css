@@ -1,44 +1,26 @@
-.App {
-  text-align: center;
+html{
+  background-color: rgb(0, 0, 0);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+body { 
+  background: url(https://i.pinimg.com/originals/31/cb/9b/31cb9bc47ee5ebabec9ae8fd36420676.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: auto;
 }
 
 .cards-container {
-  justify-content: center;
-  display: grid;
+  position: relative;
+  display: inline-grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  justify-content: space-evenly;
+  gap: 75px;
   z-index: 1;
+  left: 21.5%;
 }
 
 .item-card {
   position: relative;
-  left: 25%;
   border: 1px solid rgb(87, 116, 143);
   background-color: white;
   padding: 15px 15px 60px ;
@@ -48,10 +30,23 @@
   text-align: center;
 }
 
+/* PRICE TAG */
 .item-card span{
   position: relative;
   right: 105px;
   bottom: 25px;
+  font-family: "Papyrus";
+  font-size: larger;
+  text-shadow: 
+  0 0 3px rgb(0, 0, 0),
+  0 0 3px rgb(255, 255, 255),
+  0 0 3px rgb(255, 255, 255),
+  0 0 3px rgb(255, 255, 255),
+  0 0 3px rgb(255, 255, 255),
+  0 0 3px rgb(255, 255, 255),
+  0 0 5px rgb(255, 255, 255),
+  0 0 5px rgb(255, 255, 255),
+  0 0 5px rgb(255, 255, 255);
 }
 
 .item-image{
@@ -59,28 +54,6 @@
   height: 150px;
   object-fit: cover;
   border: 1px solid darkgrey;
-}
-
-.item-card span {
-  background-color: transparent;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-#header{
-  position: sticky;
-  top:0;
-  background-color: #9c2d49;
-  text-align: center;
-  z-index: 2;
-  box-shadow: 5px 5px 5px rgb(128, 128, 128);
 }
 
 #loginFormBox{
@@ -109,4 +82,85 @@
 
 #loginPrompt{
   text-align: center;
+}
+
+
+#header{
+  position: sticky;
+  top:0;
+  background-color: #9c2d49;
+  text-align: center;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  z-index: 4;
+}
+
+.tab-home{
+  position: sticky;
+  top:0;
+  justify-content: center;
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 75px;
+  background: transparent;
+}
+.tab{
+  position: relative;
+  top: -5px;
+  background: linear-gradient(180deg, #6fb1e7, #609bca, #6fb1e7);
+  border: none;
+  width: 100px;
+  height: 40px;
+  font-family: "Papyrus";
+  font-size: 30px;
+  font-weight: 500;
+  border-radius: 5px;
+  border-style: inset;
+  border-color: #669fce; 
+}
+
+
+.tab:hover{
+  background: linear-gradient(180deg, #74b9f1, #67a6da, #76bcf5);
+  border-style: outset;
+  border-color: #669fce; 
+}
+
+.search-button{
+  position: absolute;
+  left: 5px;
+  background: linear-gradient(180deg, #6fb1e7, #609bca, #6fb1e7);
+  border: none;
+  width: 100px;
+  height: 35px;
+  font-family: "Papyrus";
+  font-size: 24px;
+  font-weight: 500;
+  border-radius: 5px;
+  border-color: #75b4e7; 
+  border-style: inset;
+}
+.search-button:hover{
+  border-color: #669fce; 
+  border-style: outset;
+}
+.text-box{
+  position: absolute;
+  left: 109px;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border-style: inset;
+  border-color: #669fce; 
+}
+.text-box:hover{
+  border-style: outset;
+  border-color: #669fce; 
+}
+
+.ui-large-fluid-icon-input{
+  position: sticky;
+  width: 40%;
+  top:102px;
+  background-color: #9c2d49;
+  z-index: 4;
 }

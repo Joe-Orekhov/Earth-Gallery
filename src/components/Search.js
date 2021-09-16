@@ -13,13 +13,14 @@ function Search({ handleSearchSubmit }) {
     }
 
     return (
-        <div className="ui large fluid icon input">
+        <div className="ui-large-fluid-icon-input">
             <input
                 type="text"
                 placeholder="Search Earth Gallery"
                 onChange={handleUserTyping}
+                className="text-box"
             />
-            <button onClick={handleClick}>Search</button>
+            <button className="search-button" onClick={handleClick}>Search</button>
         </div>
     )
 }
