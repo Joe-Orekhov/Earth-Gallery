@@ -10,10 +10,10 @@ function CartItem({ item, userCartItems, performCartDelete }){
 
   return(
     <div className="cart-item-card">
+      <img className="cart-image" src={item.itemImg} alt={item.name}></img>
       <h3 className="cart-name">{item.itemName}</h3>
       <p className="cart-price">$ {item.itemPrice}</p>
       <button onClick={handleCartDelete}>Delete</button>
-      <img className="cart-image" src={item.itemImg} alt={item.name}></img>
     </div>
   )
 }

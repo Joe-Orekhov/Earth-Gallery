@@ -165,7 +165,11 @@ function App() {
           />
         </Route>
         <Route path="/cart">
-          <Cart selectUser={selectUser} userCartItems={userCartItems} performCheckout={performCheckout} performCartDelete={performCartDelete}/>
+          <Cart selectUser={selectUser} 
+            userCartItems={userCartItems} 
+            performCheckout={performCheckout} 
+            performCartDelete={performCartDelete}
+          />
         </Route>
         <Route path="/">
           <LoginPage userArr={userArr} handleUser={handleUser}/>

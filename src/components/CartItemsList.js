@@ -10,7 +10,12 @@ function CartItemsList({ selectUser, userCartItems, performCheckout, performCart
 
   return(
     <div className="cart-list">
-      {userCartItems.map((cartItem) => <CartItem key={cartItem.id} item={cartItem} userCartItems={userCartItems} performCartDelete={performCartDelete}/>)}
+      {userCartItems.map((cartItem) => <CartItem 
+        key={cartItem.id} 
+        item={cartItem} 
+        userCartItems={userCartItems} 
+        performCartDelete={performCartDelete}
+      />)}
       <div className="cart-summary">
         <p>Total: ${userCartItems.reduce((previous, current) => previous + parseInt(current.itemPrice), 0)}</p>
         <button onClick={handleCheckout}>1-Click<br />Checkout</button>
