@@ -8,7 +8,6 @@ function Cart({ selectUser, userCartItems }){
       <h1>Cart</h1>
        <CartItemsList selectUser={selectUser} userCartItems={userCartItems} />
     </div>
-
   )
 }
 

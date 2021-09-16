@@ -77,6 +77,23 @@ body {
   border-radius: 5px;
 }
 
+.cart-summary {
+  text-align: center;
+}
+
+.cart-summary button {
+  background-color: teal;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  border-width: 1px;
+  border: 0%;
+}
+
+.cart-list button:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 #loginFormBox{
   position: fixed;
   background: linear-gradient(180deg, #8f1a378e 0%, #8f1a37 60%, #8f1a37 100%);
