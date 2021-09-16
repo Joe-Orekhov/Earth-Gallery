@@ -1,8 +1,8 @@
-import react, { useState } from "react";
+import React, { useState } from "react";
 
 function EditItemForm({ item, handleSubmitEdit, selectUser, performDelete }){
 
-  const { itemName, itemImg, itemCreator, itemDescription, itemPrice } = item;
+  const { itemName, itemImg, itemDescription, itemPrice } = item;
   const [ updatedInput, setUpdatedInput ] = useState({
     name: itemName,
     image: itemImg,
@@ -43,9 +43,13 @@ function EditItemForm({ item, handleSubmitEdit, selectUser, performDelete }){
       <h1>Edit</h1>
       <form onSubmit= {handleSubmit}>
         <label>Name: <input type="text" name="name" value={updatedInput.name} onChange={handleInput}/></label>
+        <br />
         <label>Image URL: <input type="text" name="image" value={updatedInput.image} onChange={handleInput}/></label>
-        <label>Description: <input type="text" name="description" value={updatedInput.description} onChange={handleInput}/></label>
+        <br />
+        <label>Description: <textarea name="description" value={updatedInput.description} onChange={handleInput}/></label>
+        <br />
         <label>Price: <input type="text" name="price" value={updatedInput.price} onChange={handleInput}/></label>
+        <br />
         <input type="submit" value="Submit" />
       </form>
       <button onClick={handleDeleteClick}>Delete</button>

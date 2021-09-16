@@ -1,4 +1,4 @@
-import react from "react"
+import React from "react";
 import ItemCard from "./ItemCard"
 import NewItemCard from "./NewItemCard"
 import { useLocation } from "react-router-dom";

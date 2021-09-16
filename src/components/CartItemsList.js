@@ -1,13 +1,13 @@
-import react from "react"
+import React from "react";
 import CartItem from "./CartItem";
 
-function CartItemList({ selectUser }){
-  console.log(selectUser.cartItems)
+function CartItemsList({ selectUser, userCartItems }){
+  // console.log(userCartItems);
   return(
     <div>
-      {/* {cartArr.map(cartItem => <CartItem cartItem={cartItem}/> )} */}
+      {/* {selectUser.cartItems.map(cartItem => <CartItem key={cartItem.id} cartItem={cartItem} />)} */}
     </div>
   )
 }
 
-export default CartItemList;
+export default CartItemsList;

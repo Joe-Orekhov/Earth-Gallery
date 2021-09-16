@@ -1,4 +1,4 @@
-import react from "react"
+import React from "react";
 
   function Header({ selectUser }){
   
@@ -9,7 +9,7 @@ import react from "react"
             <h1>{`Welcome to ${selectUser.username}'s Art Gallery`}</h1>
           </div>
         )
-      }else if(selectUser.username == undefined){
+      }else if(selectUser.username === undefined){
         return(
           <div id="header">
             <h1>{`Welcome to Earths Gallery`}</h1>
