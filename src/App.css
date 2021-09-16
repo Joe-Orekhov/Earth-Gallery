@@ -8,6 +8,7 @@ body {
 } */
 html{
   /* background: radial-gradient( #ffffff 50%, #a5a5a5 60%, #505050 100%); */
+  background: url(https://pavbca.com/walldb/original/8/3/8/167611.jpg) no-repeat center center fixed;
   background-attachment: fixed;
   top: 200px;
   font-family: Verdana, sans-serif;
@@ -44,7 +45,7 @@ body {
   position: relative;
   right: 105px;
   bottom: 25px;
-  font-family: "Papyrus";
+  /* font-family: "Papyrus"; */
   font-size: larger;
   text-shadow: 
   0 0 3px rgb(0, 0, 0),
@@ -73,6 +74,7 @@ body {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
+  text-align: left;
 }
 
 .cart-item-card {
@@ -119,6 +121,7 @@ body {
   margin-right: auto;
   font-family: Verdana, sans-serif;
   text-align: center;
+  background-color: #A3A893;
 }
 
 #loginForm{
@@ -142,10 +145,10 @@ body {
 
 
 #header{
-  top: 0px;
+  /* top: -5px; */
   position: sticky;
-  top:0;
-  background: url(https://pavbca.com/walldb/original/8/3/8/167611.jpg) no-repeat center center fixed;
+  /* background: url(https://pavbca.com/walldb/original/8/3/8/167611.jpg) no-repeat center center fixed; */
+  background-color: #DED8CE;
   text-align: center;
   box-shadow: 5px 5px 5px rgb(0, 0, 0);
   z-index: 4;
@@ -197,7 +200,7 @@ h1{
   border: none;
   width: 100px;
   height: 40px;
-  font-family: "Papyrus";
+  /* font-family: "Papyrus"; */
   font-size: 30px;
   font-weight: 500;
   border-radius: 5px;
@@ -216,7 +219,7 @@ h1{
   border: none;
   width: 120px;
   height: 40px;
-  font-family: "Papyrus";
+  /* font-family: "Papyrus"; */
   font-size: 30px;
   font-weight: 500;
   border-radius: 5px;
@@ -235,7 +238,7 @@ h1{
   border: none;
   width: 100px;
   height: 35px;
-  font-family: "Papyrus";
+  /* font-family: "Papyrus"; */
   font-size: 30px;
   font-weight: 500;
   border-radius: 5px;
@@ -262,14 +265,18 @@ h1{
 }
 
 .ui-large-fluid-icon-input{
-  position: fixed;
+  /* position: fixed;
   width: 40%;
   top:105px;
   background-color: #9c2d49;
+  z-index: 4; */
+
+  position: fixed;
+  /* width: 40%; */
+  top: 100px;
+  left: -425px;
   z-index: 4;
 }
-
-
 
 .edit-form{
   position: relative;

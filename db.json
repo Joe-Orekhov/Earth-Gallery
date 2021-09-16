@@ -31,6 +31,22 @@
       "itemDescription": "A brown leash, 38\" long. Gold hardware included. I'll send you an email to collect engraving info.",
       "itemPrice": "35",
       "id": 6
+    },
+    {
+      "itemName": "Lavender Care Package",
+      "itemImg": "https://i.etsystatic.com/26911214/r/il/cdad39/3166373976/il_794xN.3166373976_io66.jpg",
+      "itemCreator": "Aurora",
+      "itemDescription": "This package includes a candle, soap, sugar scrub, and facial steam sachet.",
+      "itemPrice": "49",
+      "id": 7
+    },
+    {
+      "itemName": "Small Green Vase",
+      "itemImg": "https://i.etsystatic.com/10166595/r/il/8806c3/3328736844/il_794xN.3328736844_3wcr.jpg",
+      "itemCreator": "Aurora",
+      "itemDescription": "Dimensions: 4\" x 3\". Speckled green with gray.",
+      "itemPrice": "29",
+      "id": 8
     }
   ],
   "users": [
