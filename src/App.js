@@ -18,6 +18,8 @@ function App() {
   const [ selectUser, setSelectUser ] = useState({});
   const [ isAddedCart, setIsAddedCart ] = useState(false);
   const [ userCartItems, setUserCartItems ] = useState([]);
+  const [ isCheckedOut, setIsCheckedOut ] = useState(false);
+  const [ isDeletedCart, setIsDeletedCart ] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/items")
@@ -76,16 +78,13 @@ function App() {
     fetch("http://localhost:3000/users")
     .then(resp=> resp.json())
     .then(data => setUserArr(data))
-  }, [isAddedCart])
+  }, [isAddedCart, isCheckedOut, isDeletedCart])
  
 
   function handleUser(user){
     setSelectUser(user[0]);
     setUserCartItems(user[0].cartItems);
-    // console.log(user[0].cartItems)
   }
-  
-  // CART ITEMS LOGIC
 
   function performCartAdd(item) {
     fetch(`http://localhost:3000/users/${selectUser.id}`, {
@@ -103,6 +102,44 @@ function App() {
     .then(data => {
       setUserCartItems([...userCartItems, item])
       setIsAddedCart(!isAddedCart)
+    })
+  }
+
+  function performCheckout() {
+    fetch(`http://localhost:3000/users/${selectUser.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        ...selectUser,
+        cartItems: []
+      })
+    })
+    .then(resp => resp.json())
+    .then(data => {
+      setUserCartItems([])
+      setIsCheckedOut(!isCheckedOut)
+    })
+  }
+
+  function performCartDelete(index) {
+    fetch(`http://localhost:3000/users/${selectUser.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        ...selectUser,
+        cartItems: userCartItems.slice(0, index).concat(userCartItems.slice(index + 1))
+      })
+    })
+    .then(resp => resp.json())
+    .then(data => {
+      setUserCartItems(userCartItems.slice(0, index).concat(userCartItems.slice(index + 1)));
+      setIsCheckedOut(!isDeletedCart);
     })
   }
   
@@ -128,7 +165,11 @@ function App() {
           />
         </Route>
         <Route path="/cart">
-          <Cart selectUser={selectUser} userCartItems={userCartItems}/>
+          <Cart selectUser={selectUser} 
+            userCartItems={userCartItems} 
+            performCheckout={performCheckout} 
+            performCartDelete={performCartDelete}
+          />
         </Route>
         <Route path="/">
           <LoginPage userArr={userArr} handleUser={handleUser}/>

@@ -58,6 +58,44 @@ html{
   border: 1px solid darkgrey;
 }
 
+.cart-container {
+  padding: 15px;
+}
+
+.cart-list {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cart-item-card {
+  width: auto;
+  height: 150px;
+}
+
+.cart-image {
+  height: 100px;
+  float: right;
+  border-radius: 5px;
+}
+
+.cart-summary {
+  text-align: center;
+}
+
+.cart-summary button {
+  background-color: teal;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  border-width: 1px;
+  border: 0%;
+}
+
+.cart-list button:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 #loginFormBox{
   position: fixed;
   top: 250px;
