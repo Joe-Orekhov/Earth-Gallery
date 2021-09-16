@@ -82,10 +82,7 @@ function App() {
   function handleUser(user){
     setSelectUser(user[0]);
     setUserCartItems(user[0].cartItems);
-    // console.log(user[0].cartItems)
   }
-  
-  // CART ITEMS LOGIC
 
   function performCartAdd(item) {
     fetch(`http://localhost:3000/users/${selectUser.id}`, {
