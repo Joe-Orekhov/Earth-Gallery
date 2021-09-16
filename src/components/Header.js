@@ -1,3 +1,5 @@
+
+import React from "react";
 import { Link } from "react-router-dom";
 
   function Header({ selectUser }){
@@ -11,7 +13,7 @@ import { Link } from "react-router-dom";
             </h1>
           </div>
         )
-      }else if(selectUser.username == undefined){
+      }else if(selectUser.username === undefined){
         return(
           <div id="header">
             <h1>{`Welcome to Earths Gallery`}</h1>

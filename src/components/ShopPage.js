@@ -1,9 +1,9 @@
-import react, { useEffect, useState } from "react"
+import React from "react";
 import ItemsContainer from "./ItemsContainer";
 import Search from "./Search";
 import { Link } from "react-router-dom";
 
-function ShopPage({ displayedItems, handleSearchSubmit, handleCartItems }){
+function ShopPage({ displayedItems, handleSearchSubmit, performCartAdd }){
 
   const buttonText = "Add To Cart"
 
@@ -12,7 +12,11 @@ function ShopPage({ displayedItems, handleSearchSubmit, handleCartItems }){
       <h1>Shop
       </h1>
       <Search handleSearchSubmit={handleSearchSubmit} />
-      <ItemsContainer displayedItems={displayedItems} buttonText={buttonText} handleClick={handleCartItems}/>
+      <ItemsContainer 
+        displayedItems={displayedItems} 
+        buttonText={buttonText} 
+        handleClick={performCartAdd}
+      />
     </div>
   )
 }

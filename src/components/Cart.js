@@ -1,13 +1,13 @@
-import react from "react"
-import CartItemList from "./CartItemsList";
+import React from "react";
+import CartItemsList from "./CartItemsList";
 import { Link } from "react-router-dom";
 
-function Cart({ selectUser }){
+function Cart({ selectUser, userCartItems }){
   return(
     <div>
       <h1>Cart
       </h1>
-       <CartItemList selectUser={selectUser} />
+       <CartItemsList selectUser={selectUser} userCartItems={userCartItems} />
     </div>
 
   )

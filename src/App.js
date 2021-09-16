@@ -14,11 +14,11 @@ function App() {
   const [ patchedEdit, setPatchedEdit ] = useState(false);
   const [ deletedItem, setDeletedItem ] = useState(false);
   const [ createdItem, setCreatedItem ] = useState(false);
-  const [ userArr, setUserArr ] = useState([])
-  const [ selectUser, setSelectUser ] = useState({})
-  const [ cartArr, setCartArr ] = useState([])
+  const [ userArr, setUserArr ] = useState([]);
+  const [ selectUser, setSelectUser ] = useState({});
+  const [ isAddedCart, setIsAddedCart ] = useState(false);
+  const [ userCartItems, setUserCartItems ] = useState([]);
 
-  
   useEffect(() => {
     fetch("http://localhost:3000/items")
     .then(resp => resp.json())
@@ -75,37 +75,35 @@ function App() {
   useEffect(()=>{
     fetch("http://localhost:3000/users")
     .then(resp=> resp.json())
-    .then(data => {setUserArr(data)})
-  }, [])
+    .then(data => setUserArr(data))
+  }, [isAddedCart])
  
 
   function handleUser(user){
-    setSelectUser(user[0])
+    setSelectUser(user[0]);
+    setUserCartItems(user[0].cartItems);
+    // console.log(user[0].cartItems)
   }
   
-  function handleCartItems(items){
-    setCartArr([...cartArr, items])
-  }
   // CART ITEMS LOGIC
 
-  function handleCartItems(item){
-    return(
-      fetch(`http://localhost:3000/users/${selectUser.id}`
-      ,{
-        method: "PATCH",
-        headers:{
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body : JSON.stringify({
-          ...selectUser, 
-          cartItems: [...selectUser.cartItems, item]
-        })
-      }
-      )
-      .then(resp => resp.json())
-      .then(newCartItem => setCartArr([...cartArr, newCartItem ]))
-    )
+  function performCartAdd(item) {
+    fetch(`http://localhost:3000/users/${selectUser.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        ...selectUser,
+        cartItems: [...userCartItems, item]
+      })
+    })
+    .then(resp => resp.json())
+    .then(data => {
+      setUserCartItems([...userCartItems, item])
+      setIsAddedCart(!isAddedCart)
+    })
   }
   
   return (
@@ -116,7 +114,7 @@ function App() {
           <ShopPage 
             displayedItems={displayedItems} 
             handleSearchSubmit={handleSearchSubmit}
-            handleCartItems={ handleCartItems }
+            performCartAdd={ performCartAdd }
           />
         </Route>
         <Route path="/sell">
@@ -130,7 +128,7 @@ function App() {
           />
         </Route>
         <Route path="/cart">
-          <Cart selectUser={selectUser} />
+          <Cart selectUser={selectUser} userCartItems={userCartItems}/>
         </Route>
         <Route path="/">
           <LoginPage userArr={userArr} handleUser={handleUser}/>

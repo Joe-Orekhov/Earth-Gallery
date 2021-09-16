@@ -1,4 +1,4 @@
-import react, { useState } from "react"
+import React, { useState } from "react";
 
 function NewItemForm({ selectUser, performAdd }){
 
@@ -28,9 +28,13 @@ function NewItemForm({ selectUser, performAdd }){
       <h1>New</h1>
       <form onSubmit={handleNewSubmit} >
         <label>Name: <input type="text" name="itemName" onChange={handleUserInput} /></label>
+        <br />
         <label>Image URL: <input type="text" name="itemImg" onChange={handleUserInput} /></label>
-        <label>Description: <input type="text" name="itemDescription" onChange={handleUserInput} /></label>
+        <br />
+        <label>Description: <textarea name="itemDescription" onChange={handleUserInput} /></label>
+        <br />
         <label>Price: <input type="text" name="itemPrice" onChange={handleUserInput} /></label>
+        <br />
         <input type="submit" value="Submit" />
       </form>
     </div>
