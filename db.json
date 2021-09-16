@@ -1,14 +1,6 @@
 {
   "items": [
     {
-      "id": 1,
-      "itemName": "Moon Phases, Set of 3",
-      "itemImg": "https://i.etsystatic.com/7352268/r/il/5fe530/2012728993/il_794xN.2012728993_o519.jpg",
-      "itemCreator": "Aurora",
-      "itemDescription": "A set of watercolor paintings, based on the moon's phases. Each print is 11\"x14\". Frames not included.",
-      "itemPrice": 89
-    },
-    {
       "id": 3,
       "itemName": "Macrame Headboard Wall Art",
       "itemImg": "https://i.etsystatic.com/12236165/r/il/166c5b/1954094120/il_794xN.1954094120_lkrp.jpg",
@@ -77,6 +69,14 @@
           "itemDescription": "A brown leash, 38\" long. Gold hardware included. I'll send you an email to collect engraving info.",
           "itemPrice": "35",
           "id": 6
+        },
+        {
+          "id": 3,
+          "itemName": "Macrame Headboard Wall Art",
+          "itemImg": "https://i.etsystatic.com/12236165/r/il/166c5b/1954094120/il_794xN.1954094120_lkrp.jpg",
+          "itemCreator": "Rose",
+          "itemDescription": "Handmade macrame wall art. Intended for use as a headboard piece for a full sized bed. Width is 74\".",
+          "itemPrice": 65
         }
       ]
     },

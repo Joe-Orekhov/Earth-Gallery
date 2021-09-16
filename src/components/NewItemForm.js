@@ -24,7 +24,7 @@ function NewItemForm({ selectUser, performAdd }){
   }
 
   return(
-    <div className="item-form">
+    <div className="edit-form">
       <h1>New</h1>
       <form onSubmit={handleNewSubmit} >
         <label>Name: <input type="text" name="itemName" onChange={handleUserInput} /></label>

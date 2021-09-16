@@ -45,13 +45,13 @@ function EditItemForm({ item, handleSubmitEdit, selectUser, performDelete, handl
     <div className="edit-form">
       <h2>{`Editing ${updatedInput.name}`}</h2>
       <form onSubmit= {handleSubmit}>
-        <label>Name: <input type="text" name="name" value={updatedInput.name} onChange={handleInput}/></label>
+        <label>Name:<br/> <input type="text" name="name" value={updatedInput.name} onChange={handleInput}/></label>
         <br />
-        <label>Image URL: <input type="text" name="image" value={updatedInput.image} onChange={handleInput}/></label>
+        <label>Image URL:<br/> <input type="text" name="image" value={updatedInput.image} onChange={handleInput}/></label>
         <br />
-        <label>Description: <textarea name="description" value={updatedInput.description} onChange={handleInput}/></label>
+        <label>Description: <br/> <textarea name="description" value={updatedInput.description} onChange={handleInput}/></label>
         <br />
-        <label>Price: <input type="text" name="price" value={updatedInput.price} onChange={handleInput}/></label>
+        <label>Price: <br/> <input type="text" name="price" value={updatedInput.price} onChange={handleInput}/></label>
         <br />
         <input type="submit" value="Submit" />
       </form>
