@@ -9,7 +9,7 @@ function ShopPage({ displayedItems, handleSearchSubmit, performCartAdd }){
 
   return(
     <div>
-      <h1>Shop
+      <h1>
       </h1>
       <Search handleSearchSubmit={handleSearchSubmit} />
       <ItemsContainer 

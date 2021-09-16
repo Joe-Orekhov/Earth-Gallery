@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
-function EditItemForm({ item, handleSubmitEdit, selectUser, performDelete }){
+function EditItemForm({ item, handleSubmitEdit, selectUser, performDelete, handleHideForm }){
 
   const { itemName, itemImg, itemDescription, itemPrice } = item;
+
   const [ updatedInput, setUpdatedInput ] = useState({
     name: itemName,
     image: itemImg,
@@ -32,6 +33,7 @@ function EditItemForm({ item, handleSubmitEdit, selectUser, performDelete }){
     };
 
     handleSubmitEdit(updatedObj);
+    handleHideForm()
   }
 
   function handleDeleteClick() {
@@ -39,20 +41,22 @@ function EditItemForm({ item, handleSubmitEdit, selectUser, performDelete }){
   }
 
   return(
+    <div className="edit-form-home">
     <div className="edit-form">
-      <h1>Edit</h1>
+      <h2>{`Editing ${updatedInput.name}`}</h2>
       <form onSubmit= {handleSubmit}>
-        <label>Name: <input type="text" name="name" value={updatedInput.name} onChange={handleInput}/></label>
+        <label>Name:<br/> <input type="text" name="name" value={updatedInput.name} onChange={handleInput}/></label>
         <br />
-        <label>Image URL: <input type="text" name="image" value={updatedInput.image} onChange={handleInput}/></label>
+        <label>Image URL:<br/> <input type="text" name="image" value={updatedInput.image} onChange={handleInput}/></label>
         <br />
-        <label>Description: <textarea name="description" value={updatedInput.description} onChange={handleInput}/></label>
+        <label>Description: <br/> <textarea name="description" value={updatedInput.description} onChange={handleInput}/></label>
         <br />
-        <label>Price: <input type="text" name="price" value={updatedInput.price} onChange={handleInput}/></label>
+        <label>Price: <br/> <input type="text" name="price" value={updatedInput.price} onChange={handleInput}/></label>
         <br />
         <input type="submit" value="Submit" />
       </form>
       <button onClick={handleDeleteClick}>Delete</button>
+    </div>
     </div>
   )
 }
