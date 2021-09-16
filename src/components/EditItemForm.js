@@ -1,14 +1,15 @@
-import react, { useState } from "react";
+import React, { useState } from "react";
 
-function EditItemForm({ item, handleSubmitEdit, selectUser }){
+function EditItemForm({ item, handleSubmitEdit, selectUser, performDelete, handleHideForm }){
 
-  const { itemName, itemImg, itemCreator, itemDescription, itemPrice } = item;
+  const { itemName, itemImg, itemDescription, itemPrice } = item;
+
   const [ updatedInput, setUpdatedInput ] = useState({
-    itemName,
-    itemImg,
-    itemCreator: selectUser,
-    itemDescription,
-    itemPrice
+    name: itemName,
+    image: itemImg,
+    itemCreator: selectUser.username,
+    description: itemDescription,
+    price: itemPrice
   })
 
   function handleInput(event) {
@@ -18,20 +19,44 @@ function EditItemForm({ item, handleSubmitEdit, selectUser }){
     });
   }
 
-  function handleSubmit() {
-    handleSubmitEdit(updatedInput)
+  function handleSubmit(event) {
+
+    event.preventDefault();
+
+    const updatedObj = {
+      itemName: updatedInput.name,
+      itemImg: updatedInput.image,
+      itemCreator: selectUser.username,
+      itemDescription: updatedInput.description,
+      itemPrice: updatedInput.price,
+      id: item.id
+    };
+
+    handleSubmitEdit(updatedObj);
+    handleHideForm()
+  }
+
+  function handleDeleteClick() {
+    performDelete(item.id);
   }
 
   return(
+    <div className="edit-form-home">
     <div className="edit-form">
-      <h1>Edit</h1>
-      <form>
-        <label>Name: <input type="text" name="name" value={updatedInput.itemName} onChange={handleInput}/></label>
-        <label>Image URL: <input type="text" name="image" value={updatedInput.itemImg}/></label>
-        <label>Description: <input type="text" name="description" value={updatedInput.itemDescription}/></label>
-        <label>Price: <input type="text" name="price" value={updatedInput.itemPrice}/></label>
+      <h2>{`Editing ${updatedInput.name}`}</h2>
+      <form onSubmit= {handleSubmit}>
+        <label>Name: <input type="text" name="name" value={updatedInput.name} onChange={handleInput}/></label>
+        <br />
+        <label>Image URL: <input type="text" name="image" value={updatedInput.image} onChange={handleInput}/></label>
+        <br />
+        <label>Description: <textarea name="description" value={updatedInput.description} onChange={handleInput}/></label>
+        <br />
+        <label>Price: <input type="text" name="price" value={updatedInput.price} onChange={handleInput}/></label>
+        <br />
         <input type="submit" value="Submit" />
       </form>
+      <button onClick={handleDeleteClick}>Delete</button>
+    </div>
     </div>
   )
 }
