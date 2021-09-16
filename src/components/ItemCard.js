@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 function ItemCard({ item, selectUser, buttonText, buttonValue, handleClick, performDelete }){
 
   const location = useLocation();
-  const { itemName, itemImg, itemCreator, itemDescription, itemPrice } = item;
+  const { itemName, itemImg, itemDescription, itemPrice } = item;
   const [ showEditForm, setEditForm ] = useState(false);
 
   function handleEditClick(event) {

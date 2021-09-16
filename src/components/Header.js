@@ -22,14 +22,14 @@ import { Link } from "react-router-dom";
       }else if(selectUser.username === undefined){
         return(
           <div id="header">
-            <h1>{`Welcome to Earths Gallery`}</h1>
+            <h1>{`Welcome to Earth's Gallery`}</h1>
             <Link to="/login"><button className="login-tab">Login</button></Link>
           </div>
         )
       }else{
         return(
           <div id="header">
-            <h1>{`Earths gallery is experiencing some dificulties`}</h1>
+            <h1>{`Earth's gallery is experiencing some dificulties`}</h1>
           </div>
         )
       }
