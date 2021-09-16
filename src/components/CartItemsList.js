@@ -2,10 +2,9 @@ import React from "react";
 import CartItem from "./CartItem";
 
 function CartItemsList({ selectUser, userCartItems }){
-  // console.log(userCartItems);
   return(
     <div>
-      {/* {selectUser.cartItems.map(cartItem => <CartItem key={cartItem.id} cartItem={cartItem} />)} */}
+      {userCartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem} />)}
     </div>
   )
 }

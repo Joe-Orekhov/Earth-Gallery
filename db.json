@@ -99,6 +99,14 @@
           "itemCreator": "Sparrow",
           "itemDescription": "Medium sized pots. Diameter of 12\" and height of 10\".",
           "itemPrice": 52
+        },
+        {
+          "id": 1,
+          "itemName": "Moon Phases, Set of 3",
+          "itemImg": "https://i.etsystatic.com/7352268/r/il/5fe530/2012728993/il_794xN.2012728993_o519.jpg",
+          "itemCreator": "Aurora",
+          "itemDescription": "A set of watercolor paintings, based on the moon's phases. Each print is 11\"x14\". Frames not included.",
+          "itemPrice": 89
         }
       ]
     }

@@ -3,7 +3,6 @@ import CartItemsList from "./CartItemsList";
 import { Link } from "react-router-dom";
 
 function Cart({ selectUser, userCartItems }){
-  console.log(userCartItems);
   return(
     <div>
       <h1>Cart
