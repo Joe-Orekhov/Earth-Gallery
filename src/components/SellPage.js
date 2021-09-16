@@ -13,7 +13,7 @@ function SellPage({ displayedItems, handleSearchSubmit, selectUser, handleSubmit
 
   return(
     <div>
-      <h1>SellPage
+      <h1>
       </h1>
       <ItemsContainer 
         displayedItems={userSellItems} 
