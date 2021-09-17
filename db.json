@@ -45,7 +45,7 @@
       "itemImg": "https://i.etsystatic.com/26911214/r/il/cdad39/3166373976/il_794xN.3166373976_io66.jpg",
       "itemCreator": "Aurora",
       "itemDescription": "This package includes a candle, soap, sugar scrub, and facial steam sachet.",
-      "itemPrice": "49",
+      "itemPrice": "55",
       "id": 8
     },
     {
@@ -61,7 +61,7 @@
       "itemImg": "https://i.etsystatic.com/15183544/r/il/b777f5/3059944333/il_794xN.3059944333_9618.jpg",
       "itemCreator": "Aurora",
       "itemDescription": "Handmade item. 8 inch hoop diameter, 20 inches from top to bottom.",
-      "itemPrice": "35",
+      "itemPrice": "32",
       "id": 10
     },
     {
@@ -119,6 +119,87 @@
       "itemDescription": "Life size",
       "itemPrice": "Priceless",
       "id": 17
+    },
+    {
+      "itemName": "Vegetable Seed Variety Pack",
+      "itemImg": "https://i.etsystatic.com/7671613/r/il/31c489/454239962/il_794xN.454239962_i3n3.jpg",
+      "itemCreator": "Aurora",
+      "itemDescription": "This kit includes 30 varieties of heirloom vegetable seeds. It's perfect for saving for a rainy day or planting some now.",
+      "itemPrice": "35",
+      "id": 18
+    },
+    {
+      "itemName": "Metal Wire Vase",
+      "itemImg": "https://i.etsystatic.com/28405914/r/il/3a8624/3006934139/il_794xN.3006934139_c5jy.jpg",
+      "itemCreator": "Aurora",
+      "itemDescription": "Handmade Minimalist Metal Wire Structure with Glass Tube Flower Vase suitable for any modern decor. Height: 6 inches. Width: 4.5 inches.",
+      "itemPrice": "25",
+      "id": 19
+    },
+    {
+      "itemName": "Dried Arrangement With Vase (Small)",
+      "itemImg": "https://i.etsystatic.com/19969015/r/il/e8b645/3143874304/il_794xN.3143874304_dxi8.jpg",
+      "itemCreator": "Aurora",
+      "itemDescription": "Size; the height of the bouquet is about 25-32cm\nCeramic vase; height 10cm, width 7cm",
+      "itemPrice": "15",
+      "id": 20
+    },
+    {
+      "itemName": "Hexagon Pet Tag",
+      "itemImg": "https://i.etsystatic.com/20679352/r/il/fb2a74/3081982484/il_794xN.3081982484_4js0.jpg",
+      "itemCreator": "Sparrow",
+      "itemDescription": "Your choice of color and engraving. I will send you an email to collect your preferences. ",
+      "itemPrice": "14",
+      "id": 21
+    },
+    {
+      "itemName": "Personalized Cutting Board",
+      "itemImg": "https://i.etsystatic.com/14301248/r/il/5431dc/1127271520/il_794xN.1127271520_2182.jpg",
+      "itemCreator": "Sparrow",
+      "itemDescription": "16\" x 10.5\". Choose from three high quality types of wood - maple, walnut, and cherry. I'll email you for customization.",
+      "itemPrice": "45",
+      "id": 22
+    },
+    {
+      "itemName": "Personalized Dog Collar",
+      "itemImg": "https://i.etsystatic.com/27595921/r/il/e3c788/3323876399/il_794xN.3323876399_8vv7.jpg",
+      "itemCreator": "Natalie",
+      "itemDescription": "You will receive an email form for me to collect personalization preferences.",
+      "itemPrice": "25",
+      "id": 23
+    },
+    {
+      "itemName": "Wooden Dog House",
+      "itemImg": "https://i.etsystatic.com/22057696/r/il/d2531b/3291222033/il_794xN.3291222033_5i0y.jpg",
+      "itemCreator": "Natalie",
+      "itemDescription": "This is for mid-sized dogs, up to 60 pounds. 45\" x 40\" x 33\".",
+      "itemPrice": "150",
+      "id": 24
+    },
+    {
+      "itemName": "Pet Portrait Painting",
+      "itemImg": "https://i.etsystatic.com/13859025/r/il/76df3d/2976297472/il_794xN.2976297472_8919.jpg",
+      "itemCreator": "Natalie",
+      "itemDescription": "12\" x 16\" framed print. You will receive an email asking for your dog's picture. ",
+      "itemPrice": "55",
+      "id": 25
+    },
+    {
+      "itemName": "Donut Vase, Cream",
+      "itemImg": "https://i.etsystatic.com/16623052/r/il/6857c0/3165757995/il_794xN.3165757995_jeka.jpg",
+      "itemCreator": "Natalie",
+      "itemDescription": "7\"x9\". The vase has an unglazed and textured matte finish that is perfect for combining with pampas grass, dried floral, or even flowers from your garden.",
+      "itemPrice": "22",
+      "id": 26
+    },
+    {
+      "itemName": "Opal Star Necklace",
+      "itemImg": "https://i.etsystatic.com/17065121/r/il/378bfc/1955177886/il_794xN.1955177886_5cvz.jpg",
+      "itemCreator": "Natalie",
+      "itemDescription": "13mm x 10mm Gold plated oval opal star pendant. Gold Filled satellite beaded or cable chain. 15\" long.",
+      "itemPrice": "30",
+      "id": 27
+
     }
   ],
   "users": [
@@ -157,14 +238,6 @@
           "itemDescription": "A brown leash, 38\" long. Gold hardware included. I'll send you an email to collect engraving info.",
           "itemPrice": "35",
           "id": 6
-        },
-        {
-          "itemName": "Human Heart",
-          "itemImg": "https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/02/07/Pictures/_02f82bea-4991-11ea-a2c3-ce206a175aca.jpg",
-          "itemCreator": "Rose",
-          "itemDescription": "Don't ask questions. Its real, Healthy, Strong.",
-          "itemPrice": "3000",
-          "id": 7
         }
       ]
     },
@@ -200,9 +273,16 @@
       ]
     },
     {
+
       "id": 4,
       "username": "Joe",
       "userImg": "https://newevolutiondesigns.com/images/freebies/cool-wallpaper-1.jpg",
+    },
+    }
+      "id": 5,
+      "username": "Natalie",
+      "userImg": "https://cdn.stocksnap.io/img-thumbs/960w/butterfly-close%20up_IKM10BMRII.jpg",
+
       "cartItems": []
     }
   ]
