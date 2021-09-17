@@ -1,13 +1,4 @@
-/* html{
-  background-color: rgb(0, 0, 0);
-}
-body { 
-  background: url(https://pavbca.com/walldb/original/8/3/8/167611.jpg) no-repeat center center fixed; 
-  -o-background-size: cover;
-  background-size: auto;
-} */
 html{
-  /* background: radial-gradient( #ffffff 50%, #a5a5a5 60%, #505050 100%); */
   background: url(https://pavbca.com/walldb/original/8/3/8/167611.jpg) no-repeat center center fixed;
   background-attachment: fixed;
   top: 200px;
@@ -40,23 +31,11 @@ body {
   text-align: center;
 }
 
-/* PRICE TAG */
 .item-card span{
   position: relative;
   right: 107px;
   bottom: 30px;
-  /* font-family: "Papyrus"; */
   font-size: larger;
-  /* text-shadow: 
-  0 0 3px rgb(0, 0, 0),
-  0 0 3px rgb(255, 255, 255),
-  0 0 3px rgb(255, 255, 255),
-  0 0 3px rgb(255, 255, 255),
-  0 0 3px rgb(255, 255, 255),
-  0 0 3px rgb(255, 255, 255),
-  0 0 5px rgb(255, 255, 255),
-  0 0 5px rgb(255, 255, 255),
-  0 0 5px rgb(255, 255, 255); */
   background-color: white;
   border-radius: 5px;
 }
@@ -111,8 +90,6 @@ body {
 #loginFormBox{
   position: relative;
   top: 250px;
-  /* background: linear-gradient(180deg, #7a7a7a, #e4e4e4, #7a7a7a); */
-  /* background: #191970; */
   box-shadow: 5px 5px #888888;
   width: 400px;
   height: 150px;
@@ -129,16 +106,9 @@ body {
 
 #loginForm{
   position: relative;
-  /* width: 100%;
-  left: 40%;
-  top: 40%; */
 }
 
 #loginBttn{
-  /* position: absolute;
-  width: 20%;
-  bottom: 6px;
-  right: 6px; */
   position: relative;
 }
 
@@ -150,7 +120,6 @@ body {
 #header{
   top: -30px;
   position: relative;
-  /* background: url(https://pavbca.com/walldb/original/8/3/8/167611.jpg) no-repeat center center fixed; */
   background-color: #DED8CE;
   text-align: center;
   box-shadow: 5px 5px 5px gray;
@@ -166,7 +135,6 @@ h1{
   font-size: 40px;
 }
 .tab-home{
-  /* position: sticky; */
   position: relative;
   padding-top: 20px;
   display: inline-grid;
@@ -174,7 +142,6 @@ h1{
   gap: 10px;
   background: transparent;
   width: 25%;
-  /* left: 53%; */
 }
 .tab{
   position: relative;
@@ -183,7 +150,6 @@ h1{
   border: none;
   width: 100px;
   height: 40px;
-  /* font-family: "Papyrus"; */
   font-family: Verdana, sans-serif;
   font-size: 30px;
   font-weight: 1000px;
@@ -196,9 +162,6 @@ h1{
 }
 
 .tab:hover{
-  /* background-color: black;
-  border-style: outset;
-  border-color: #707070;  */
   box-shadow: 3px 3px #888888;
 }
 
@@ -206,19 +169,15 @@ h1{
   position: relative;
   top: -5px;
   left: 47%;
-  /* background: linear-gradient(180deg, #c9c9c9, #e7e7e7, #c9c9c9); */
   border: none;
   width: 100px;
   height: 40px;
-  /* font-family: "Papyrus"; */
   font-size: 30px;
   font-weight: 500;
   border-radius: 5px;
   border-color: #d3d3d3; 
 }
 .login-tab:hover{
-  /* background: linear-gradient(180deg, #7a7a7a, #e4e4e4, #7a7a7a); */
-  /* border-color: #adadad;  */
   box-shadow: 3px 3px #888888;
 }
 
@@ -226,11 +185,9 @@ h1{
   position: absolute;
   top: 98px;
   left: 88%;
-  /* background: linear-gradient(180deg, #c9c9c9, #e7e7e7, #c9c9c9); */
   border: none;
   width: 120px;
   height: 40px;
-  /* font-family: "Papyrus"; */
   font-size: 30px;
   font-weight: 500;
   border-radius: 5px;
@@ -238,19 +195,15 @@ h1{
 }
 
 .login-tab-else:hover{
-  /* background: linear-gradient(180deg, #7a7a7a, #e4e4e4, #7a7a7a);
-  border-color: #adadad;  */
   box-shadow: 3px 3px #888888;
 }
 
 .search-button{
   position: absolute;
   left: 740px;
-  /* background: linear-gradient(180deg, #c9c9c9, #e7e7e7, #c9c9c9); */
   border: none;
   width: 100px;
   height: 35px;
-  /* font-family: "Papyrus"; */
   font-size: 25px;
   font-weight: 500;
   border-radius: 5px;
@@ -277,14 +230,7 @@ h1{
 }
 
 .ui-large-fluid-icon-input{
-  /* position: fixed;
-  width: 40%;
-  top:105px;
-  background-color: #9c2d49;
-  z-index: 4; */
-
   position: relative;
-  /* width: 40%; */
   top: 0px;
   left: -50px;
   z-index: 4;
@@ -295,20 +241,10 @@ h1{
   background: linear-gradient(180deg, #c9c9c9, #e7e7e7, #c9c9c9);
   border-radius: 10px;
   border-style: dotted;
-  /* border-color: rgb(255, 0, 51); */
   bottom: 320px;
   height: 400px;
   display: inline-block;
 }
-  /* animation-name: blinking;
-  animation-duration: 1s;
-  animation-iteration-count: 100;
-}
-@keyframes blinking {
-  1% {
-    border-color: #e5ff00;
-  }
-} */
 
 label{
   font-family: "fantasy";
