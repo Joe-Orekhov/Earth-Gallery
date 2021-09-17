@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 function ItemCard({ item, selectUser, buttonText, buttonValue, handleClick, performDelete }){
 
   const location = useLocation();
-  const { itemName, itemImg, itemCreator, itemDescription, itemPrice } = item;
+  const { itemName, itemImg, itemDescription, itemPrice } = item;
   const [ showEditForm, setEditForm ] = useState(false);
 
   function handleEditClick(event) {
@@ -30,7 +30,7 @@ function ItemCard({ item, selectUser, buttonText, buttonValue, handleClick, perf
       </div>
       <span id="card-price">{`$${itemPrice}`}</span>
       <h3 name="name">{itemName}</h3>
-      <p>{itemDescription}</p>
+      <p className="card-description">{itemDescription}</p>
       <button className="card-button" onClick={handleEditClick} value={buttonValue}>{buttonText}</button>
       {showEditForm ? <EditItemForm item={item} handleSubmitEdit={handleClick} selectUser={selectUser} performDelete={performDelete} handleHideForm={handleHideForm} /> : null}
     </div>

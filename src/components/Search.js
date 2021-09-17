@@ -9,18 +9,21 @@ function Search({ handleSearchSubmit }) {
     }
 
     function handleClick(event) {
+        event.preventDefault();
         handleSearchSubmit(searchInput);
     }
 
     return (
         <div className="ui-large-fluid-icon-input">
-            <input
-                type="text"
-                placeholder="Search Earth Gallery"
-                onChange={handleUserTyping}
-                className="text-box"
-            />
-            <button className="search-button" onClick={handleClick}>Search</button>
+            <form onSubmit={handleClick}>
+                <input
+                    type="text"
+                    placeholder="Search Earth Gallery"
+                    onChange={handleUserTyping}
+                    className="text-box"
+                />
+                <input type="submit" className="search-button" value="Search" />
+            </ form>
         </div>
     )
 }

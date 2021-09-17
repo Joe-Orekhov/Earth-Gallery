@@ -1,7 +1,7 @@
 import React from "react";
 import ItemsContainer from "./ItemsContainer";
 import Search from "./Search";
-import { Link } from "react-router-dom";
+
 
 function ShopPage({ displayedItems, handleSearchSubmit, performCartAdd }){
 

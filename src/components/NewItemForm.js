@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NewItemForm({ selectUser, performAdd }){
+function NewItemForm({ selectUser, performAdd, handleNewFormClick }){
 
   const [ newInput, setNewInput ] = useState({
     itemName: "",
@@ -19,8 +19,8 @@ function NewItemForm({ selectUser, performAdd }){
 
   function handleNewSubmit(event) {
     event.preventDefault();
-    console.log(newInput);
     performAdd(newInput);
+    handleNewFormClick();
   }
 
   return(
@@ -37,6 +37,7 @@ function NewItemForm({ selectUser, performAdd }){
         <br />
         <input type="submit" value="Submit" />
       </form>
+      <button onClick={handleNewFormClick}>Back</button>
     </div>
   )
 }

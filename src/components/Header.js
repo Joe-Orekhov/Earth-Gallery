@@ -69,12 +69,3 @@ export default Header;
 //           </div>
 //         )
 //       }
-
-
-//     }
-//     return(
-//       <HeaderDisplayed />
-//   )
-// }
-
-// export default Header;
