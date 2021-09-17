@@ -22,9 +22,9 @@ function Header({ selectUser }){
              {`Welcome to ${selectUser.username}'s Art Gallery`}
          </h1>
          <div className="tab-home"> 
-           <Link to="/sell"><button className="tab">Sell</button></Link>
-           <Link to="/shop"><button className="tab">Shop</button></Link>
-           <Link to="/cart"><button className="tab">Cart</button></Link>
+           <Link to="/sell"><button className="tab" id={location === "/sell" ? "current-tab" : null}>Sell</button></Link>
+           <Link to="/shop"><button className="tab" id={location === "/shop" ? "current-tab" : null}>Shop</button></Link>
+           <Link to="/cart"><button className="tab" id={location === "/cart" ? "current-tab" : null}>Cart</button></Link>
          </div>
          <Link to="/"><button className="login-tab-else">Logout</button></Link>
        </div>
