@@ -6,8 +6,8 @@ body {
   -o-background-size: cover;
   background-size: auto;
 } */
-html{
-  background: radial-gradient( #ffffff 50%, #a5a5a5 60%, #505050 100%);
+body{
+  background: radial-gradient( #e2e2e2 50%, #a5a5a5 60%, #7a7a7a 100%);
   background-attachment: fixed;
   top: 200px;
 }
@@ -25,9 +25,9 @@ html{
   position: relative;
   border: 1px solid rgb(87, 116, 143);
   background-color: white;
-  padding: 15px 15px 60px ;
+  padding: 15px 15px 15px ;
   box-shadow: 5px 10px 10px darkgrey;
-  height: 350px;
+  height: 400px;
   width: 250px;
   text-align: center;
 }
@@ -58,19 +58,42 @@ html{
   border: 1px solid darkgrey;
 }
 
+.card-button{
+  position: relative;
+  bottom: 10px;
+  background-color: transparent;
+  border: none;
+  width: 100px;
+  height: 40px;
+  font-family: "Papyrus";
+  font-weight: bolder;
+  border-radius: 5px;
+  background-color: rgb(205, 245, 205);
+}
+
+.card-button:hover{
+  background-color: rgb(169, 253, 169);
+}
+
+
 .cart-container {
+  position: relative;
   padding: 15px;
+  width: 50%;
+  left: 25%;
 }
 
 .cart-list {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
+  border: royalblue;
 }
 
 .cart-item-card {
   width: auto;
   height: 150px;
+  border-bottom-style: solid;
 }
 
 .cart-image {
@@ -81,15 +104,45 @@ html{
 
 .cart-summary {
   text-align: center;
+  font-family: "Papyrus";
+  font-size: 30px;
 }
 
 .cart-summary button {
-  background-color: teal;
+  background-color: rgb(180, 248, 174);
   color: white;
   font-size: 20px;
   border-radius: 10px;
   border-width: 1px;
   border: 0%;
+}
+.cart-summary button:hover {
+  background-color: rgb(150, 248, 141);
+  color: rgb(207, 207, 207);
+  font-size: 20px;
+  border-radius: 8px;
+  border-width: 1px;
+  border: 0%;
+}
+
+.cart-price{
+  position: relative;
+  left: 48%;
+  font-family: "Papyrus";
+  font-size: 30px;
+}
+.cart-button-delete{
+  position: relative;
+  bottom: 100px;
+  background: linear-gradient(180deg, #c9c9c9, #e7e7e7, #c9c9c9);
+  border: none;
+  width: 100px;
+  height: 40px;
+  font-family: "Papyrus";
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  border-color: #d3d3d3;
 }
 
 .cart-list button:hover{
@@ -99,12 +152,24 @@ html{
 #loginFormBox{
   position: fixed;
   top: 250px;
-  background: linear-gradient(180deg, #7a7a7a, #e4e4e4, #7a7a7a);
+  background: linear-gradient(180deg, rgb(104, 209, 104), rgb(151, 255, 151), rgb(104, 209, 104));
   width: 400px;
   height: 100px;
   border-color: black;
   border-radius: 10px;
   left: 40%;
+}
+
+#select-user{
+  border: none;
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+#select-user:hover{
+  background-color: rgb(218, 218, 218);
 }
 
 #loginForm{
@@ -119,6 +184,18 @@ html{
   width: 20%;
   bottom: 6px;
   right: 6px;
+  border: none;
+  width: 100px;
+  height: 30px;
+  font-size: larger;
+  font-family: "Papyrus";
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+#loginBttn:hover{
+  border-radius: 3px;
+  background:linear-gradient(180deg, #e0e0e0, #e7e7e7, #e6e6e6);
 }
 
 #loginPrompt{
@@ -128,8 +205,7 @@ html{
 
 #header{
   top: 0px;
-  position: sticky;
-  top:0;
+position: sticky;
   background: url(https://pavbca.com/walldb/original/8/3/8/167611.jpg) no-repeat center center fixed;
   text-align: center;
   box-shadow: 5px 5px 5px rgb(0, 0, 0);
@@ -169,7 +245,6 @@ h1{
 
 .tab:hover{
   background-color: black;
-  border-style: outset;
   border-color: #707070; 
 }
 
@@ -177,7 +252,7 @@ h1{
   position: relative;
   top: -5px;
   left: 47%;
-  background: linear-gradient(180deg, #c9c9c9, #e7e7e7, #c9c9c9);
+  background: linear-gradient(180deg, rgb(179, 221, 179), rgb(175, 230, 175), rgb(205, 245, 205));
   border: none;
   width: 100px;
   height: 40px;
@@ -188,7 +263,7 @@ h1{
   border-color: #d3d3d3; 
 }
 .login-tab:hover{
-  background: linear-gradient(180deg, #7a7a7a, #e4e4e4, #7a7a7a);
+  background: linear-gradient(180deg, rgb(198, 245, 198), rgb(159, 199, 159), rgb(198, 245, 198));
   border-color: #adadad; 
 }
 
@@ -196,7 +271,7 @@ h1{
   position: absolute;
   top: 98px;
   left: 88%;
-  background: linear-gradient(180deg, #c9c9c9, #e7e7e7, #c9c9c9);
+  background: linear-gradient(180deg, rgb(179, 221, 179), rgb(175, 230, 175), rgb(205, 245, 205));
   border: none;
   width: 120px;
   height: 40px;
@@ -208,14 +283,14 @@ h1{
 }
 
 .login-tab-else:hover{
-  background: linear-gradient(180deg, #7a7a7a, #e4e4e4, #7a7a7a);
+  background: linear-gradient(180deg, rgb(198, 245, 198), rgb(159, 199, 159), rgb(198, 245, 198));
   border-color: #adadad; 
 }
 
 .search-button{
   position: absolute;
   left: 740px;
-  background: linear-gradient(180deg, #c9c9c9, #e7e7e7, #c9c9c9);
+  background: linear-gradient(180deg, rgb(179, 221, 179), rgb(175, 230, 175), rgb(205, 245, 205));
   border: none;
   width: 100px;
   height: 35px;
@@ -227,7 +302,7 @@ h1{
 }
 
 .search-button:hover{
-  background: linear-gradient(180deg, #7a7a7a, #e4e4e4, #7a7a7a);
+  background: linear-gradient(180deg, rgb(198, 245, 198), rgb(184, 231, 184), rgb(198, 245, 198));
   border-color: #adadad; 
 }
 
@@ -276,4 +351,17 @@ h1{
 label{
   font-family: "fantasy";
   font-weight: 500px;
+}
+
+#current-tab{
+  background: linear-gradient(180deg, rgb(179, 221, 179), rgb(175, 230, 175), rgb(205, 245, 205));
+  text-shadow: 
+  0 0 15px rgb(119, 214, 56),
+  0 0 15px rgb(119, 214, 56)
+  ;
+}
+#current-tab:hover{
+  background: linear-gradient(180deg, rgb(198, 245, 198), rgb(159, 199, 159), rgb(198, 245, 198));
+  text-shadow: 
+  0 0 15px rgb(239, 255, 239);
 }

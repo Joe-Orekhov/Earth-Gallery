@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function ShopPage({ displayedItems, handleSearchSubmit, performCartAdd }){
 
-  const buttonText = "Add To Cart"
+  const buttonText = "Add To 🛒"
 
   return(
     <div>
