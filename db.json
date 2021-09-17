@@ -14,7 +14,7 @@
       "itemImg": "https://i.etsystatic.com/24648433/r/il/fc82bf/2900695375/il_794xN.2900695375_i5fx.jpg",
       "itemCreator": "Sparrow",
       "itemDescription": "Medium sized pots. Diameter of 12\" and height of 10\".",
-      "itemPrice": 52
+      "itemPrice": "40"
     },
     {
       "itemName": "Coffee Candle",
@@ -31,6 +31,38 @@
       "itemDescription": "A brown leash, 38\" long. Gold hardware included. I'll send you an email to collect engraving info.",
       "itemPrice": "35",
       "id": 6
+    },
+    {
+      "itemName": "Lavender Care Package",
+      "itemImg": "https://i.etsystatic.com/26911214/r/il/cdad39/3166373976/il_794xN.3166373976_io66.jpg",
+      "itemCreator": "Aurora",
+      "itemDescription": "This package includes a candle, soap, sugar scrub, and facial steam sachet.",
+      "itemPrice": "49",
+      "id": 7
+    },
+    {
+      "itemName": "Small Green Vase",
+      "itemImg": "https://i.etsystatic.com/10166595/r/il/8806c3/3328736844/il_794xN.3328736844_3wcr.jpg",
+      "itemCreator": "Aurora",
+      "itemDescription": "Dimensions: 4\" x 3\". Speckled green with gray.",
+      "itemPrice": "29",
+      "id": 8
+    },
+    {
+      "itemName": "Dreamcatcher",
+      "itemImg": "https://i.etsystatic.com/15183544/r/il/b777f5/3059944333/il_794xN.3059944333_9618.jpg",
+      "itemCreator": "Aurora",
+      "itemDescription": "Handmade item. 8 inch hoop diameter, 20 inches from top to bottom.",
+      "itemPrice": "35",
+      "id": 9
+    },
+    {
+      "itemName": "Reclaimed Wood Shelves",
+      "itemImg": "https://i.etsystatic.com/10197535/r/il/8133d6/1917169420/il_794xN.1917169420_55yt.jpg",
+      "itemCreator": "Sparrow",
+      "itemDescription": "Set of 3 shelves. 2\" x 8\" x 32\". Brackets included.",
+      "itemPrice": "75",
+      "id": 10
     }
   ],
   "users": [
@@ -53,32 +85,7 @@
       "id": 2,
       "username": "Sparrow",
       "userImg": "https://cdn.stocksnap.io/img-thumbs/960w/lion-animal_59MITCJOK0.jpg",
-      "cartItems": [
-        {
-          "id": 1,
-          "itemName": "Moon Phases, Set of 3",
-          "itemImg": "https://i.etsystatic.com/7352268/r/il/5fe530/2012728993/il_794xN.2012728993_o519.jpg",
-          "itemCreator": "Aurora",
-          "itemDescription": "A set of watercolor paintings, based on the moon's phases. Each print is 11\"x14\". Frames not included.",
-          "itemPrice": 89
-        },
-        {
-          "itemName": "Leather Dog Leash",
-          "itemImg": "https://i.etsystatic.com/12670967/r/il/1ec7f1/1281304531/il_794xN.1281304531_qjgq.jpg",
-          "itemCreator": "Sparrow",
-          "itemDescription": "A brown leash, 38\" long. Gold hardware included. I'll send you an email to collect engraving info.",
-          "itemPrice": "35",
-          "id": 6
-        },
-        {
-          "id": 3,
-          "itemName": "Macrame Headboard Wall Art",
-          "itemImg": "https://i.etsystatic.com/12236165/r/il/166c5b/1954094120/il_794xN.1954094120_lkrp.jpg",
-          "itemCreator": "Rose",
-          "itemDescription": "Handmade macrame wall art. Intended for use as a headboard piece for a full sized bed. Width is 74\".",
-          "itemPrice": 65
-        }
-      ]
+      "cartItems": []
     },
     {
       "id": 3,

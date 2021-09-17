@@ -1,6 +1,5 @@
 import React from "react";
 import ItemsContainer from "./ItemsContainer";
-import { Link } from "react-router-dom";
 
 
 function SellPage({ displayedItems, handleSearchSubmit, selectUser, handleSubmitEdit, performDelete, performAdd }){
