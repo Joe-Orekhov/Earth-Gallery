@@ -5,7 +5,7 @@ import Search from "./Search";
 
 function ShopPage({ displayedItems, handleSearchSubmit, performCartAdd }){
 
-  const buttonText = "Add To Cart"
+  const buttonText = "Add To 🛒"
 
   return(
     <div>

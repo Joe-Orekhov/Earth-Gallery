@@ -33,12 +33,21 @@
       "id": 6
     },
     {
+
+      "itemName": "Human Heart",
+      "itemImg": "https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/02/07/Pictures/_02f82bea-4991-11ea-a2c3-ce206a175aca.jpg",
+      "itemCreator": "Rose",
+      "itemDescription": "Don't ask questions. Its real, Healthy, Strong.",
+      "itemPrice": "3000",
+      "id": 7
+    },
+    {
       "itemName": "Lavender Care Package",
       "itemImg": "https://i.etsystatic.com/26911214/r/il/cdad39/3166373976/il_794xN.3166373976_io66.jpg",
       "itemCreator": "Aurora",
       "itemDescription": "This package includes a candle, soap, sugar scrub, and facial steam sachet.",
       "itemPrice": "49",
-      "id": 7
+      "id": 8
     },
     {
       "itemName": "Small Green Vase",
@@ -46,7 +55,7 @@
       "itemCreator": "Aurora",
       "itemDescription": "Dimensions: 4\" x 3\". Speckled green with gray.",
       "itemPrice": "29",
-      "id": 8
+      "id": 9
     },
     {
       "itemName": "Dreamcatcher",
@@ -54,7 +63,7 @@
       "itemCreator": "Aurora",
       "itemDescription": "Handmade item. 8 inch hoop diameter, 20 inches from top to bottom.",
       "itemPrice": "35",
-      "id": 9
+      "id": 10
     },
     {
       "itemName": "Reclaimed Wood Shelves",
@@ -62,7 +71,7 @@
       "itemCreator": "Sparrow",
       "itemDescription": "Set of 3 shelves. 2\" x 8\" x 32\". Brackets included.",
       "itemPrice": "75",
-      "id": 10
+      "id": 11
     }
   ],
   "users": [
@@ -85,7 +94,32 @@
       "id": 2,
       "username": "Sparrow",
       "userImg": "https://cdn.stocksnap.io/img-thumbs/960w/lion-animal_59MITCJOK0.jpg",
-      "cartItems": []
+      "cartItems": [
+        {
+          "id": 1,
+          "itemName": "Moon Phases, Set of 3",
+          "itemImg": "https://i.etsystatic.com/7352268/r/il/5fe530/2012728993/il_794xN.2012728993_o519.jpg",
+          "itemCreator": "Aurora",
+          "itemDescription": "A set of watercolor paintings, based on the moon's phases. Each print is 11\"x14\". Frames not included.",
+          "itemPrice": 89
+        },
+        {
+          "itemName": "Leather Dog Leash",
+          "itemImg": "https://i.etsystatic.com/12670967/r/il/1ec7f1/1281304531/il_794xN.1281304531_qjgq.jpg",
+          "itemCreator": "Sparrow",
+          "itemDescription": "A brown leash, 38\" long. Gold hardware included. I'll send you an email to collect engraving info.",
+          "itemPrice": "35",
+          "id": 6
+        },
+        {
+          "itemName": "Human Heart",
+          "itemImg": "https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/02/07/Pictures/_02f82bea-4991-11ea-a2c3-ce206a175aca.jpg",
+          "itemCreator": "Rose",
+          "itemDescription": "Don't ask questions. Its real, Healthy, Strong.",
+          "itemPrice": "3000",
+          "id": 7
+        }
+      ]
     },
     {
       "id": 3,
@@ -107,6 +141,14 @@
           "itemDescription": "Love the smell of coffee in the morning? Want it without the afternoon jitters? Replace your cup of joe with this scent! ",
           "itemPrice": "20",
           "id": 5
+        },
+        {
+          "itemName": "Human Heart",
+          "itemImg": "https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/02/07/Pictures/_02f82bea-4991-11ea-a2c3-ce206a175aca.jpg",
+          "itemCreator": "Rose",
+          "itemDescription": "Don't ask questions. Its real, Healthy, Strong.",
+          "itemPrice": "3000",
+          "id": 7
         }
       ]
     }

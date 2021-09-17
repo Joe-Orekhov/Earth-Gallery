@@ -18,9 +18,9 @@ function LoginPage({ userArr, handleUser }){
 
   return(
     <div id="loginFormBox">
-      <h3 id="loginPrompt">WELCOME, PLEASE LOG IN</h3>
+      <h3 id="loginPrompt">WELCOME, PLEASE LOG IN...</h3>
       <form id="loginForm" onChange={handleChange}>
-        <select >
+        <select id="select-user" >
           <option>Select User</option>
           {userArr.map(user => {
             return(
@@ -30,7 +30,7 @@ function LoginPage({ userArr, handleUser }){
         </select>
       </form>
       <Link to="/shop">
-        <button id="loginBttn" onClick={handleSend} >Login</button>
+        <button id="loginBttn" onClick={handleSend} >Log In</button>
       </Link>
     </div>
   )

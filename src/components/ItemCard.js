@@ -28,7 +28,7 @@ function ItemCard({ item, selectUser, buttonText, buttonValue, handleClick, perf
       <div className="image-box">
         <img className="item-image" src={itemImg} alt={itemName}></img>
       </div>
-      <span id="card-price">{itemPrice}</span>
+      <span id="card-price">{`$${itemPrice}`}</span>
       <h3 name="name">{itemName}</h3>
       <p className="card-description">{itemDescription}</p>
       <button className="card-button" onClick={handleEditClick} value={buttonValue}>{buttonText}</button>

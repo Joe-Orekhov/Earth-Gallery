@@ -12,7 +12,7 @@ function CartItem({ item, userCartItems, performCartDelete }){
       <img className="cart-image" src={item.itemImg} alt={item.name}></img>
       <h3 className="cart-name">{item.itemName}</h3>
       <p className="cart-price">$ {item.itemPrice}</p>
-      <button onClick={handleCartDelete}>Delete</button>
+      <button className="cart-button-delete" onClick={handleCartDelete}>Put Back</button>
     </div>
   )
 }
