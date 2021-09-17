@@ -37,6 +37,7 @@ function NewItemForm({ selectUser, performAdd, handleNewFormClick }){
         <br />
         <input type="submit" value="Submit" />
       </form>
+      <button onClick={handleNewFormClick}>Back</button>
     </div>
   )
 }

@@ -17,7 +17,6 @@ function LoginPage({ userArr, handleUser }){
   }
 
   return(
-    
     <div id="loginFormBox">
       <h3 id="loginPrompt">WELCOME, PLEASE LOG IN</h3>
       <form id="loginForm" onChange={handleChange}>

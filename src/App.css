@@ -314,3 +314,12 @@ label{
   font-family: "fantasy";
   font-weight: 500px;
 }
+
+.card-button {
+  position: relative;
+  bottom: 10px;
+}
+
+.card-description {
+  min-height: 10px;
+}
