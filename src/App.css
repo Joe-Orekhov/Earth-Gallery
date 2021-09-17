@@ -10,13 +10,7 @@ body{
   background: radial-gradient( #e2e2e2 50%, #a5a5a5 60%, #7a7a7a 100%);
   background-attachment: fixed;
   top: 200px;
-  font-family: Verdana, sans-serif;
 }
-
-body {
-  text-align: center;
-}
-
 .cards-container {
   position: relative;
   display: inline-grid;
@@ -24,13 +18,12 @@ body {
   justify-content: space-evenly;
   gap: 75px;
   z-index: 1;
-  padding: 75px;
+  left: 25%;
 }
 
 .item-card {
   position: relative;
   border: 1px solid rgb(87, 116, 143);
-  border-radius: 5px;
   background-color: white;
   padding: 15px 15px 15px ;
   box-shadow: 5px 10px 10px darkgrey;
@@ -42,11 +35,11 @@ body {
 /* PRICE TAG */
 .item-card span{
   position: relative;
-  right: 107px;
-  bottom: 30px;
-  /* font-family: "Papyrus"; */
+  right: 105px;
+  bottom: 25px;
+  font-family: "Papyrus";
   font-size: larger;
-  /* text-shadow: 
+  text-shadow: 
   0 0 3px rgb(0, 0, 0),
   0 0 3px rgb(255, 255, 255),
   0 0 3px rgb(255, 255, 255),
@@ -55,9 +48,7 @@ body {
   0 0 3px rgb(255, 255, 255),
   0 0 5px rgb(255, 255, 255),
   0 0 5px rgb(255, 255, 255),
-  0 0 5px rgb(255, 255, 255); */
-  background-color: white;
-  border-radius: 5px;
+  0 0 5px rgb(255, 255, 255);
 }
 
 .item-image{
@@ -65,7 +56,6 @@ body {
   height: 150px;
   object-fit: cover;
   border: 1px solid darkgrey;
-  border-radius: 10px;
 }
 
 .card-button{
@@ -160,21 +150,14 @@ body {
 }
 
 #loginFormBox{
-  position: relative;
+  position: fixed;
   top: 250px;
   background: linear-gradient(180deg, rgb(104, 209, 104), rgb(151, 255, 151), rgb(104, 209, 104));
-
   width: 400px;
-  height: 150px;
-  border-style: solid;
-  border-width: thin;
-  border-color: #888888;
+  height: 100px;
+  border-color: black;
   border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: Verdana, sans-serif;
-  text-align: center;
-  background-color: #A3A893;
+  left: 40%;
 }
 
 #select-user{
@@ -190,14 +173,14 @@ body {
 }
 
 #loginForm{
-  position: relative;
-  /* width: 100%;
+  position: absolute;
+  width: 100%;
   left: 40%;
-  top: 40%; */
+  top: 40%;
 }
 
 #loginBttn{
-  /* position: absolute;
+  position: absolute;
   width: 20%;
   bottom: 6px;
   right: 6px;
@@ -225,50 +208,42 @@ body {
 position: sticky;
   background: url(https://pavbca.com/walldb/original/8/3/8/167611.jpg) no-repeat center center fixed;
   text-align: center;
-  box-shadow: 5px 5px 5px gray;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
   z-index: 4;
-  height: 200px;
-  padding: 5px;
+  height: 150px;
 }
 h1{
   color: #ffffff;
   text-shadow: 
   0 0 5px rgb(0, 0, 0),
   0 0 5px rgb(0, 0, 0);
-  font-size: 40px;
 }
 .tab-home{
-  /* position: sticky; */
-  position: relative;
-  padding-top: 20px;
+  position: sticky;
+  top:0;
   display: inline-grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 1px;
   background: transparent;
   width: 25%;
-  /* left: 53%; */
+  left: 53%;
 }
 .tab{
   position: relative;
   color: white;
+  top: 40px;
   background-color: transparent;
   border: none;
   width: 100px;
   height: 40px;
-  /* font-family: "Papyrus"; */
-  font-family: Verdana, sans-serif;
+  font-family: "Papyrus";
   font-size: 30px;
   font-weight: 1000px;
   border-radius: 5px;
   background-color: rgb(0, 0, 0, 0.7);
 }
 
-#current-tab {
-  background-color: #A3A893;
-}
-
 .tab:hover{
-
   background-color: black;
   border-color: #707070; 
 }
@@ -281,7 +256,7 @@ h1{
   border: none;
   width: 100px;
   height: 40px;
-  /* font-family: "Papyrus"; */
+  font-family: "Papyrus";
   font-size: 30px;
   font-weight: 500;
   border-radius: 5px;
@@ -294,14 +269,13 @@ h1{
 
 .login-tab-else{
   position: absolute;
-  top: 98px;
+  top: 76px;
   left: 88%;
-
   background: linear-gradient(180deg, rgb(179, 221, 179), rgb(175, 230, 175), rgb(205, 245, 205));
   border: none;
-  width: 120px;
-  height: 40px;
-  /* font-family: "Papyrus"; */
+  width: 170px;
+  height: 65px;
+  font-family: "Papyrus";
   font-size: 30px;
   font-weight: 500;
   border-radius: 5px;
@@ -320,8 +294,8 @@ h1{
   border: none;
   width: 100px;
   height: 35px;
-  /* font-family: "Papyrus"; */
-  font-size: 25px;
+  font-family: "Papyrus";
+  font-size: 30px;
   font-weight: 500;
   border-radius: 5px;
   border-color: #d3d3d3; 
@@ -347,30 +321,24 @@ h1{
 }
 
 .ui-large-fluid-icon-input{
-  /* position: fixed;
+  position: fixed;
   width: 40%;
   top:105px;
   background-color: #9c2d49;
-  z-index: 4; */
-
-  position: relative;
-  /* width: 40%; */
-  top: 0px;
-  left: -50px;
   z-index: 4;
 }
+
+
 
 .edit-form{
   position: relative;
   background: linear-gradient(180deg, #c9c9c9, #e7e7e7, #c9c9c9);
-  border-radius: 10px;
+  border-radius: 2px;
   border-style: dotted;
-  /* border-color: rgb(255, 0, 51); */
-  bottom: 320px;
+  border-color: rgb(255, 0, 51);
+  bottom: 355px;
   height: 400px;
-  display: inline-block;
-}
-  /* animation-name: blinking;
+  animation-name: blinking;
   animation-duration: 1s;
   animation-iteration-count: 100;
 }
@@ -378,7 +346,7 @@ h1{
   1% {
     border-color: #e5ff00;
   }
-} */
+}
 
 label{
   font-family: "fantasy";
@@ -396,4 +364,12 @@ label{
   background: linear-gradient(180deg, rgb(198, 245, 198), rgb(159, 199, 159), rgb(198, 245, 198));
   text-shadow: 
   0 0 15px rgb(239, 255, 239);
+}
+
+.profile-img{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 100px;
+  border-style: solid;
 }

@@ -11,7 +11,6 @@ function Header({ selectUser }){
       </div>
     )
   } else if (selectUser.username !== undefined) {
-    console.log(selectUser);
     return (
       <div id="header">
            <h1>
@@ -22,7 +21,8 @@ function Header({ selectUser }){
            <Link to="/shop"><button className="tab" id={location === "/shop" ? "current-tab" : null}>Shop</button></Link>
            <Link to="/cart"><button className="tab" id={location === "/cart" ? "current-tab" : null}>Cart</button></Link>
          </div>
-         <Link to="/"><button className="login-tab-else">Logout</button></Link>
+         <Link to="/"><button className="login-tab-else"><img className="profile-img" src={selectUser.userImg} alt={`${selectUser.username}'s image`} />Logout</button></Link>
+         
        </div>
     )
   } else {
